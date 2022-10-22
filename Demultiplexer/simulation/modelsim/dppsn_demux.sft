@@ -1,0 +1,5 @@
+set tool_name "ModelSim-Altera (VHDL)"
+set corner_file_list {
+	{{"Slow Model"} {dppsn_demux.vho dppsn_demux_vhd.sdo}}
+	{{"Fast Model"} {dppsn_demux_fast.vho dppsn_demux_vhd_fast.sdo}}
+}

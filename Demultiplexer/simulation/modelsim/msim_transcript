@@ -1,0 +1,124 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do dppsn_demux_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/EliteBook/Desktop/Arhitekture paketskih cvorista - Projekat 3 - DPPNS/Demultiplexer/dppsn_demux.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity dppsn_demux
+# -- Compiling architecture rtl of dppsn_demux
+# 
+vcom -reportprogress 300 -work work {C:/Users/EliteBook/Desktop/Arhitekture paketskih cvorista - Projekat 3 - DPPNS/Demultiplexer/simulation/modelsim/dppsn_demux_testbench.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity dppsn_scheduler_testbench
+# -- Compiling architecture arch_dppsn_scheduler_testbench of dppsn_scheduler_testbench
+# ** Warning: [4] C:/Users/EliteBook/Desktop/Arhitekture paketskih cvorista - Projekat 3 - DPPNS/Demultiplexer/simulation/modelsim/dppsn_demux_testbench.vhd(183): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+vsim rtl_work.dppsn_scheduler_testbench
+# vsim rtl_work.dppsn_scheduler_testbench 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading rtl_work.dppsn_scheduler_testbench(arch_dppsn_scheduler_testbench)
+# ** Warning: (vsim-3473) Component instance "uut : dppsn_scheduler" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /dppsn_scheduler_testbench File: C:/Users/EliteBook/Desktop/Arhitekture paketskih cvorista - Projekat 3 - DPPNS/Demultiplexer/simulation/modelsim/dppsn_demux_testbench.vhd
+add wave -position insertpoint sim:/dppsn_scheduler_testbench/*
+run
+# ** Error: GRESKA 1
+#    Time: 12800 ps  Iteration: 0  Instance: /dppsn_scheduler_testbench
+# ** Error: GRESKA 2
+#    Time: 57600 ps  Iteration: 0  Instance: /dppsn_scheduler_testbench
+# ** Error: GRESKA 3
+#    Time: 128 ns  Iteration: 0  Instance: /dppsn_scheduler_testbench
+# ** Error: GRESKA 4
+#    Time: 192 ns  Iteration: 0  Instance: /dppsn_scheduler_testbench
+# ** Error: GRESKA 5
+#    Time: 256 ns  Iteration: 0  Instance: /dppsn_scheduler_testbench
+# ** Error: GRESKA 6
+#    Time: 320 ns  Iteration: 0  Instance: /dppsn_scheduler_testbench
+# ** Error: GRESKA 7
+#    Time: 396800 ps  Iteration: 0  Instance: /dppsn_scheduler_testbench
+vcom -reportprogress 300 -work work {C:/Users/EliteBook/Desktop/Arhitekture paketskih cvorista - Projekat 3 - DPPNS/Demultiplexer/simulation/modelsim/dppsn_demux_testbench.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity dppsn_demux_testbench
+# -- Compiling architecture arch_dppsn_demux_testbench of dppsn_demux_testbench
+vsim rtl_work.dppsn_demux_testbench
+# vsim rtl_work.dppsn_demux_testbench 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading rtl_work.dppsn_demux_testbench(arch_dppsn_demux_testbench)
+# Loading rtl_work.dppsn_demux(rtl)
+vcom -reportprogress 300 -work work {C:/Users/EliteBook/Desktop/Arhitekture paketskih cvorista - Projekat 3 - DPPNS/Demultiplexer/simulation/modelsim/dppsn_demux_testbench.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity dppsn_demux_testbench
+# -- Compiling architecture arch_dppsn_demux_testbench of dppsn_demux_testbench
+vsim rtl_work.dppsn_demux_testbench
+# vsim rtl_work.dppsn_demux_testbench 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading rtl_work.dppsn_demux_testbench(arch_dppsn_demux_testbench)
+# Loading rtl_work.dppsn_demux(rtl)
+add wave -position insertpoint sim:/dppsn_demux_testbench/*
+run
+add wave -position insertpoint sim:/dppsn_demux_testbench/*
+vcom -reportprogress 300 -work work {C:/Users/EliteBook/Desktop/Arhitekture paketskih cvorista - Projekat 3 - DPPNS/Demultiplexer/simulation/modelsim/dppsn_demux_testbench.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity dppsn_demux_testbench
+# -- Compiling architecture arch_dppsn_demux_testbench of dppsn_demux_testbench
+vsim rtl_work.dppsn_demux_testbench
+# vsim rtl_work.dppsn_demux_testbench 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading rtl_work.dppsn_demux_testbench(arch_dppsn_demux_testbench)
+# Loading rtl_work.dppsn_demux(rtl)
+add wave -position insertpoint sim:/dppsn_demux_testbench/*
+run

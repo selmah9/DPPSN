@@ -1,0 +1,468 @@
+Analysis & Synthesis report for dppsn_demux
+Tue Jan 14 22:16:57 2020
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Elapsed Time Per Partition
+ 10. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Jan 14 22:16:56 2020           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; dppsn_demux                                     ;
+; Top-level Entity Name              ; dppsn_demux                                     ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 283                                             ;
+;     Total combinational functions  ; 283                                             ;
+;     Dedicated logic registers      ; 0                                               ;
+; Total registers                    ; 0                                               ;
+; Total pins                         ; 570                                             ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C70F896C6       ;                    ;
+; Top-level entity name                                                      ; dppsn_demux        ; dppsn_demux        ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                        ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                 ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------+---------+
+; dppsn_demux.vhd                  ; yes             ; User VHDL File  ; C:/Users/EliteBook/Desktop/Arhitekture paketskih cvorista - Projekat 3 - DPPNS/Demultiplexer/dppsn_demux.vhd ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                 ;
++---------------------------------------------+---------------+
+; Resource                                    ; Usage         ;
++---------------------------------------------+---------------+
+; Estimated Total logic elements              ; 283           ;
+;                                             ;               ;
+; Total combinational functions               ; 283           ;
+; Logic element usage by number of LUT inputs ;               ;
+;     -- 4 input functions                    ; 2             ;
+;     -- 3 input functions                    ; 0             ;
+;     -- <=2 input functions                  ; 281           ;
+;                                             ;               ;
+; Logic elements by mode                      ;               ;
+;     -- normal mode                          ; 283           ;
+;     -- arithmetic mode                      ; 0             ;
+;                                             ;               ;
+; Total registers                             ; 0             ;
+;     -- Dedicated logic registers            ; 0             ;
+;     -- I/O registers                        ; 0             ;
+;                                             ;               ;
+; I/O pins                                    ; 570           ;
+; Embedded Multiplier 9-bit elements          ; 0             ;
+; Maximum fan-out node                        ; in_channel[3] ;
+; Maximum fan-out                             ; 71            ;
+; Total fan-out                               ; 851           ;
+; Average fan-out                             ; 1.00          ;
++---------------------------------------------+---------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |dppsn_demux               ; 283 (283)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 570  ; 0            ; |dppsn_demux        ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Jan 14 22:16:52 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off dppsn_demux -c dppsn_demux
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file dppsn_demux.vhd
+    Info (12022): Found design unit 1: dppsn_demux-rtl
+    Info (12023): Found entity 1: dppsn_demux
+Info (12127): Elaborating entity "dppsn_demux" for the top level hierarchy
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "csr_readdata[0]" is stuck at GND
+    Warning (13410): Pin "csr_readdata[1]" is stuck at GND
+    Warning (13410): Pin "csr_readdata[2]" is stuck at GND
+    Warning (13410): Pin "csr_readdata[3]" is stuck at GND
+    Warning (13410): Pin "csr_readdata[4]" is stuck at GND
+    Warning (13410): Pin "csr_readdata[5]" is stuck at GND
+    Warning (13410): Pin "csr_readdata[6]" is stuck at GND
+    Warning (13410): Pin "csr_readdata[7]" is stuck at GND
+    Warning (13410): Pin "csr_readdata[8]" is stuck at GND
+    Warning (13410): Pin "csr_readdata[9]" is stuck at GND
+    Warning (13410): Pin "csr_readdata[10]" is stuck at GND
+    Warning (13410): Pin "csr_readdata[11]" is stuck at GND
+    Warning (13410): Pin "csr_readdata[12]" is stuck at GND
+    Warning (13410): Pin "csr_readdata[13]" is stuck at GND
+    Warning (13410): Pin "csr_readdata[14]" is stuck at GND
+    Warning (13410): Pin "csr_readdata[15]" is stuck at GND
+    Warning (13410): Pin "csr_readdata[16]" is stuck at GND
+    Warning (13410): Pin "csr_readdata[17]" is stuck at GND
+    Warning (13410): Pin "csr_readdata[18]" is stuck at GND
+    Warning (13410): Pin "csr_readdata[19]" is stuck at GND
+    Warning (13410): Pin "csr_readdata[20]" is stuck at GND
+    Warning (13410): Pin "csr_readdata[21]" is stuck at GND
+    Warning (13410): Pin "csr_readdata[22]" is stuck at GND
+    Warning (13410): Pin "csr_readdata[23]" is stuck at GND
+    Warning (13410): Pin "csr_readdata[24]" is stuck at GND
+    Warning (13410): Pin "csr_readdata[25]" is stuck at GND
+    Warning (13410): Pin "csr_readdata[26]" is stuck at GND
+    Warning (13410): Pin "csr_readdata[27]" is stuck at GND
+    Warning (13410): Pin "csr_readdata[28]" is stuck at GND
+    Warning (13410): Pin "csr_readdata[29]" is stuck at GND
+    Warning (13410): Pin "csr_readdata[30]" is stuck at GND
+    Warning (13410): Pin "csr_readdata[31]" is stuck at GND
+    Warning (13410): Pin "csr_waitrequest" is stuck at GND
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 178 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "csr_address[0]"
+    Warning (15610): No output dependent on input pin "csr_address[1]"
+    Warning (15610): No output dependent on input pin "csr_address[2]"
+    Warning (15610): No output dependent on input pin "csr_address[3]"
+    Warning (15610): No output dependent on input pin "csr_address[4]"
+    Warning (15610): No output dependent on input pin "csr_address[5]"
+    Warning (15610): No output dependent on input pin "csr_address[6]"
+    Warning (15610): No output dependent on input pin "csr_address[7]"
+    Warning (15610): No output dependent on input pin "csr_address[8]"
+    Warning (15610): No output dependent on input pin "csr_address[9]"
+    Warning (15610): No output dependent on input pin "csr_address[10]"
+    Warning (15610): No output dependent on input pin "csr_address[11]"
+    Warning (15610): No output dependent on input pin "csr_address[12]"
+    Warning (15610): No output dependent on input pin "csr_address[13]"
+    Warning (15610): No output dependent on input pin "csr_address[14]"
+    Warning (15610): No output dependent on input pin "csr_address[15]"
+    Warning (15610): No output dependent on input pin "csr_read"
+    Warning (15610): No output dependent on input pin "csr_write"
+    Warning (15610): No output dependent on input pin "csr_writedata[0]"
+    Warning (15610): No output dependent on input pin "csr_writedata[1]"
+    Warning (15610): No output dependent on input pin "csr_writedata[2]"
+    Warning (15610): No output dependent on input pin "csr_writedata[3]"
+    Warning (15610): No output dependent on input pin "csr_writedata[4]"
+    Warning (15610): No output dependent on input pin "csr_writedata[5]"
+    Warning (15610): No output dependent on input pin "csr_writedata[6]"
+    Warning (15610): No output dependent on input pin "csr_writedata[7]"
+    Warning (15610): No output dependent on input pin "csr_writedata[8]"
+    Warning (15610): No output dependent on input pin "csr_writedata[9]"
+    Warning (15610): No output dependent on input pin "csr_writedata[10]"
+    Warning (15610): No output dependent on input pin "csr_writedata[11]"
+    Warning (15610): No output dependent on input pin "csr_writedata[12]"
+    Warning (15610): No output dependent on input pin "csr_writedata[13]"
+    Warning (15610): No output dependent on input pin "csr_writedata[14]"
+    Warning (15610): No output dependent on input pin "csr_writedata[15]"
+    Warning (15610): No output dependent on input pin "csr_writedata[16]"
+    Warning (15610): No output dependent on input pin "csr_writedata[17]"
+    Warning (15610): No output dependent on input pin "csr_writedata[18]"
+    Warning (15610): No output dependent on input pin "csr_writedata[19]"
+    Warning (15610): No output dependent on input pin "csr_writedata[20]"
+    Warning (15610): No output dependent on input pin "csr_writedata[21]"
+    Warning (15610): No output dependent on input pin "csr_writedata[22]"
+    Warning (15610): No output dependent on input pin "csr_writedata[23]"
+    Warning (15610): No output dependent on input pin "csr_writedata[24]"
+    Warning (15610): No output dependent on input pin "csr_writedata[25]"
+    Warning (15610): No output dependent on input pin "csr_writedata[26]"
+    Warning (15610): No output dependent on input pin "csr_writedata[27]"
+    Warning (15610): No output dependent on input pin "csr_writedata[28]"
+    Warning (15610): No output dependent on input pin "csr_writedata[29]"
+    Warning (15610): No output dependent on input pin "csr_writedata[30]"
+    Warning (15610): No output dependent on input pin "csr_writedata[31]"
+    Warning (15610): No output dependent on input pin "csr_clk_clk"
+    Warning (15610): No output dependent on input pin "csr_reset_reset_n"
+    Warning (15610): No output dependent on input pin "reset_reset_n"
+    Warning (15610): No output dependent on input pin "clk_clk"
+    Warning (15610): No output dependent on input pin "in_channel[4]"
+    Warning (15610): No output dependent on input pin "in_channel[5]"
+    Warning (15610): No output dependent on input pin "in_channel[6]"
+    Warning (15610): No output dependent on input pin "in_channel[7]"
+    Warning (15610): No output dependent on input pin "in_channel[8]"
+    Warning (15610): No output dependent on input pin "in_channel[9]"
+    Warning (15610): No output dependent on input pin "in_channel[10]"
+    Warning (15610): No output dependent on input pin "in_channel[11]"
+    Warning (15610): No output dependent on input pin "in_channel[12]"
+    Warning (15610): No output dependent on input pin "in_channel[13]"
+    Warning (15610): No output dependent on input pin "in_channel[14]"
+    Warning (15610): No output dependent on input pin "in_channel[15]"
+    Warning (15610): No output dependent on input pin "in_channel[16]"
+    Warning (15610): No output dependent on input pin "in_channel[17]"
+    Warning (15610): No output dependent on input pin "in_channel[18]"
+    Warning (15610): No output dependent on input pin "in_channel[19]"
+    Warning (15610): No output dependent on input pin "in_channel[20]"
+    Warning (15610): No output dependent on input pin "in_channel[21]"
+    Warning (15610): No output dependent on input pin "in_channel[22]"
+    Warning (15610): No output dependent on input pin "in_channel[23]"
+    Warning (15610): No output dependent on input pin "in_channel[24]"
+    Warning (15610): No output dependent on input pin "in_channel[25]"
+    Warning (15610): No output dependent on input pin "in_channel[26]"
+    Warning (15610): No output dependent on input pin "in_channel[27]"
+    Warning (15610): No output dependent on input pin "in_channel[28]"
+    Warning (15610): No output dependent on input pin "in_channel[29]"
+    Warning (15610): No output dependent on input pin "in_channel[30]"
+    Warning (15610): No output dependent on input pin "in_channel[31]"
+    Warning (15610): No output dependent on input pin "in_channel[32]"
+    Warning (15610): No output dependent on input pin "in_channel[33]"
+    Warning (15610): No output dependent on input pin "in_channel[34]"
+    Warning (15610): No output dependent on input pin "in_channel[35]"
+    Warning (15610): No output dependent on input pin "in_channel[36]"
+    Warning (15610): No output dependent on input pin "in_channel[37]"
+    Warning (15610): No output dependent on input pin "in_channel[38]"
+    Warning (15610): No output dependent on input pin "in_channel[39]"
+    Warning (15610): No output dependent on input pin "in_channel[40]"
+    Warning (15610): No output dependent on input pin "in_channel[41]"
+    Warning (15610): No output dependent on input pin "in_channel[42]"
+    Warning (15610): No output dependent on input pin "in_channel[43]"
+    Warning (15610): No output dependent on input pin "in_channel[44]"
+    Warning (15610): No output dependent on input pin "in_channel[45]"
+    Warning (15610): No output dependent on input pin "in_channel[46]"
+    Warning (15610): No output dependent on input pin "in_channel[47]"
+    Warning (15610): No output dependent on input pin "in_channel[48]"
+    Warning (15610): No output dependent on input pin "in_channel[49]"
+    Warning (15610): No output dependent on input pin "in_channel[50]"
+    Warning (15610): No output dependent on input pin "in_channel[51]"
+    Warning (15610): No output dependent on input pin "in_channel[52]"
+    Warning (15610): No output dependent on input pin "in_channel[53]"
+    Warning (15610): No output dependent on input pin "in_channel[54]"
+    Warning (15610): No output dependent on input pin "in_channel[55]"
+    Warning (15610): No output dependent on input pin "in_channel[56]"
+    Warning (15610): No output dependent on input pin "in_channel[57]"
+    Warning (15610): No output dependent on input pin "in_channel[58]"
+    Warning (15610): No output dependent on input pin "in_channel[59]"
+    Warning (15610): No output dependent on input pin "in_channel[60]"
+    Warning (15610): No output dependent on input pin "in_channel[61]"
+    Warning (15610): No output dependent on input pin "in_channel[62]"
+    Warning (15610): No output dependent on input pin "in_channel[63]"
+    Warning (15610): No output dependent on input pin "in_channel[64]"
+    Warning (15610): No output dependent on input pin "in_channel[65]"
+    Warning (15610): No output dependent on input pin "in_channel[66]"
+    Warning (15610): No output dependent on input pin "in_channel[67]"
+    Warning (15610): No output dependent on input pin "in_channel[68]"
+    Warning (15610): No output dependent on input pin "in_channel[69]"
+    Warning (15610): No output dependent on input pin "in_channel[70]"
+    Warning (15610): No output dependent on input pin "in_channel[71]"
+    Warning (15610): No output dependent on input pin "in_channel[72]"
+    Warning (15610): No output dependent on input pin "in_channel[73]"
+    Warning (15610): No output dependent on input pin "in_channel[74]"
+    Warning (15610): No output dependent on input pin "in_channel[75]"
+    Warning (15610): No output dependent on input pin "in_channel[76]"
+    Warning (15610): No output dependent on input pin "in_channel[77]"
+    Warning (15610): No output dependent on input pin "in_channel[78]"
+    Warning (15610): No output dependent on input pin "in_channel[79]"
+    Warning (15610): No output dependent on input pin "in_channel[80]"
+    Warning (15610): No output dependent on input pin "in_channel[81]"
+    Warning (15610): No output dependent on input pin "in_channel[82]"
+    Warning (15610): No output dependent on input pin "in_channel[83]"
+    Warning (15610): No output dependent on input pin "in_channel[84]"
+    Warning (15610): No output dependent on input pin "in_channel[85]"
+    Warning (15610): No output dependent on input pin "in_channel[86]"
+    Warning (15610): No output dependent on input pin "in_channel[87]"
+    Warning (15610): No output dependent on input pin "in_channel[88]"
+    Warning (15610): No output dependent on input pin "in_channel[89]"
+    Warning (15610): No output dependent on input pin "in_channel[90]"
+    Warning (15610): No output dependent on input pin "in_channel[91]"
+    Warning (15610): No output dependent on input pin "in_channel[92]"
+    Warning (15610): No output dependent on input pin "in_channel[93]"
+    Warning (15610): No output dependent on input pin "in_channel[94]"
+    Warning (15610): No output dependent on input pin "in_channel[95]"
+    Warning (15610): No output dependent on input pin "in_channel[96]"
+    Warning (15610): No output dependent on input pin "in_channel[97]"
+    Warning (15610): No output dependent on input pin "in_channel[98]"
+    Warning (15610): No output dependent on input pin "in_channel[99]"
+    Warning (15610): No output dependent on input pin "in_channel[100]"
+    Warning (15610): No output dependent on input pin "in_channel[101]"
+    Warning (15610): No output dependent on input pin "in_channel[102]"
+    Warning (15610): No output dependent on input pin "in_channel[103]"
+    Warning (15610): No output dependent on input pin "in_channel[104]"
+    Warning (15610): No output dependent on input pin "in_channel[105]"
+    Warning (15610): No output dependent on input pin "in_channel[106]"
+    Warning (15610): No output dependent on input pin "in_channel[107]"
+    Warning (15610): No output dependent on input pin "in_channel[108]"
+    Warning (15610): No output dependent on input pin "in_channel[109]"
+    Warning (15610): No output dependent on input pin "in_channel[110]"
+    Warning (15610): No output dependent on input pin "in_channel[111]"
+    Warning (15610): No output dependent on input pin "in_channel[112]"
+    Warning (15610): No output dependent on input pin "in_channel[113]"
+    Warning (15610): No output dependent on input pin "in_channel[114]"
+    Warning (15610): No output dependent on input pin "in_channel[115]"
+    Warning (15610): No output dependent on input pin "in_channel[116]"
+    Warning (15610): No output dependent on input pin "in_channel[117]"
+    Warning (15610): No output dependent on input pin "in_channel[118]"
+    Warning (15610): No output dependent on input pin "in_channel[119]"
+    Warning (15610): No output dependent on input pin "in_channel[120]"
+    Warning (15610): No output dependent on input pin "in_channel[121]"
+    Warning (15610): No output dependent on input pin "in_channel[122]"
+    Warning (15610): No output dependent on input pin "in_channel[123]"
+    Warning (15610): No output dependent on input pin "in_channel[124]"
+    Warning (15610): No output dependent on input pin "in_channel[125]"
+    Warning (15610): No output dependent on input pin "in_channel[126]"
+    Warning (15610): No output dependent on input pin "in_channel[127]"
+Info (21057): Implemented 853 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 256 input pins
+    Info (21059): Implemented 314 output pins
+    Info (21061): Implemented 283 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 214 warnings
+    Info: Peak virtual memory: 4629 megabytes
+    Info: Processing ended: Tue Jan 14 22:16:57 2020
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:03
+
+

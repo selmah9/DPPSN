@@ -1,0 +1,73 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do dppsn_match_action_table_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/EliteBook/Desktop/Arhitekture paketskih cvorista - Projekat 3 - DPPNS/Match-Action Table/dppsn_match_action_table.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity dppsn_match_action_table
+# -- Compiling architecture rtl of dppsn_match_action_table
+# 
+vcom -reportprogress 300 -work work {C:/Users/EliteBook/Desktop/Arhitekture paketskih cvorista - Projekat 3 - DPPNS/Match-Action Table/simulation/modelsim/dppsn_match_action_table_testbench.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity dppsn_match_action_table_testbench
+# -- Compiling architecture arch_dppsn_match_action_table_testbench of dppsn_match_action_table_testbench
+# ** Warning: [4] C:/Users/EliteBook/Desktop/Arhitekture paketskih cvorista - Projekat 3 - DPPNS/Match-Action Table/simulation/modelsim/dppsn_match_action_table_testbench.vhd(126): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+vcom -reportprogress 300 -work work {C:/Users/EliteBook/Desktop/Arhitekture paketskih cvorista - Projekat 3 - DPPNS/Match-Action Table/simulation/modelsim/dppsn_match_action_table_testbench.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity dppsn_match_action_table_testbench
+# -- Compiling architecture arch_dppsn_match_action_table_testbench of dppsn_match_action_table_testbench
+# ** Warning: [4] C:/Users/EliteBook/Desktop/Arhitekture paketskih cvorista - Projekat 3 - DPPNS/Match-Action Table/simulation/modelsim/dppsn_match_action_table_testbench.vhd(126): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+vsim rtl_work.dppsn_match_action_table_testbench
+# vsim rtl_work.dppsn_match_action_table_testbench 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading rtl_work.dppsn_match_action_table_testbench(arch_dppsn_match_action_table_testbench)
+# Loading rtl_work.dppsn_match_action_table(rtl)
+add wave -position insertpoint sim:/dppsn_match_action_table_testbench/*
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 60800 ps  Iteration: 1  Instance: /dppsn_match_action_table_testbench/uut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 60800 ps  Iteration: 1  Instance: /dppsn_match_action_table_testbench/uut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 176 ns  Iteration: 1  Instance: /dppsn_match_action_table_testbench/uut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 176 ns  Iteration: 1  Instance: /dppsn_match_action_table_testbench/uut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 291200 ps  Iteration: 1  Instance: /dppsn_match_action_table_testbench/uut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 291200 ps  Iteration: 1  Instance: /dppsn_match_action_table_testbench/uut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 406400 ps  Iteration: 1  Instance: /dppsn_match_action_table_testbench/uut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 406400 ps  Iteration: 1  Instance: /dppsn_match_action_table_testbench/uut

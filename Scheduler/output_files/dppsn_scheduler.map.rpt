@@ -1,0 +1,476 @@
+Analysis & Synthesis report for dppsn_scheduler
+Tue Jan 14 14:50:18 2020
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |dppsn_scheduler|s_state
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Jan 14 14:50:18 2020           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; dppsn_scheduler                                 ;
+; Top-level Entity Name              ; dppsn_scheduler                                 ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 517                                             ;
+;     Total combinational functions  ; 484                                             ;
+;     Dedicated logic registers      ; 166                                             ;
+; Total registers                    ; 166                                             ;
+; Total pins                         ; 570                                             ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C70F896C6       ;                    ;
+; Top-level entity name                                                      ; dppsn_scheduler    ; dppsn_scheduler    ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                        ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                 ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------+---------+
+; dppsn_scheduler.vhd              ; yes             ; User VHDL File  ; C:/Users/EliteBook/Desktop/Arhitekture paketskih cvorista - Projekat 3 - DPPNS/Scheduler/dppsn_scheduler.vhd ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                 ;
++---------------------------------------------+---------------+
+; Resource                                    ; Usage         ;
++---------------------------------------------+---------------+
+; Estimated Total logic elements              ; 517           ;
+;                                             ;               ;
+; Total combinational functions               ; 484           ;
+; Logic element usage by number of LUT inputs ;               ;
+;     -- 4 input functions                    ; 349           ;
+;     -- 3 input functions                    ; 65            ;
+;     -- <=2 input functions                  ; 70            ;
+;                                             ;               ;
+; Logic elements by mode                      ;               ;
+;     -- normal mode                          ; 436           ;
+;     -- arithmetic mode                      ; 48            ;
+;                                             ;               ;
+; Total registers                             ; 166           ;
+;     -- Dedicated logic registers            ; 166           ;
+;     -- I/O registers                        ; 0             ;
+;                                             ;               ;
+; I/O pins                                    ; 570           ;
+; Embedded Multiplier 9-bit elements          ; 0             ;
+; Maximum fan-out node                        ; reset_reset_n ;
+; Maximum fan-out                             ; 190           ;
+; Total fan-out                               ; 2393          ;
+; Average fan-out                             ; 1.96          ;
++---------------------------------------------+---------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |dppsn_scheduler           ; 484 (484)         ; 166 (166)    ; 0           ; 0            ; 0       ; 0         ; 570  ; 0            ; |dppsn_scheduler    ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------+
+; State Machine - |dppsn_scheduler|s_state                       ;
++------------+------------+------------+------------+------------+
+; Name       ; s_state.S3 ; s_state.S2 ; s_state.S1 ; s_state.S0 ;
++------------+------------+------------+------------+------------+
+; s_state.S0 ; 0          ; 0          ; 0          ; 0          ;
+; s_state.S1 ; 0          ; 0          ; 1          ; 1          ;
+; s_state.S2 ; 0          ; 1          ; 0          ; 1          ;
+; s_state.S3 ; 1          ; 0          ; 0          ; 1          ;
++------------+------------+------------+------------+------------+
+
+
++----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                               ;
++-----------------------------------------+----------------------------------------+
+; Register name                           ; Reason for Removal                     ;
++-----------------------------------------+----------------------------------------+
+; s_channel[4..127]                       ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 124 ;                                        ;
++-----------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 166   ;
+; Number of registers using Synchronous Clear  ; 2     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 138   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 84    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
+; 5:1                ; 70 bits   ; 210 LEs       ; 210 LEs              ; 0 LEs                  ; Yes        ; |dppsn_scheduler|s_data[8]     ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |dppsn_scheduler|s_deficit0[5] ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |dppsn_scheduler|s_deficit1[1] ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |dppsn_scheduler|s_deficit2[5] ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |dppsn_scheduler|s_deficit3[0] ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 7 LEs                ; 14 LEs                 ; Yes        ; |dppsn_scheduler|s_deficit0[8] ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 7 LEs                ; 14 LEs                 ; Yes        ; |dppsn_scheduler|s_deficit1[6] ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 7 LEs                ; 14 LEs                 ; Yes        ; |dppsn_scheduler|s_deficit2[6] ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 7 LEs                ; 14 LEs                 ; Yes        ; |dppsn_scheduler|s_deficit3[6] ;
+; 34:1               ; 4 bits    ; 88 LEs        ; 48 LEs               ; 40 LEs                 ; No         ; |dppsn_scheduler|s_state       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Jan 14 14:50:14 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off dppsn_scheduler -c dppsn_scheduler
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file dppsn_scheduler.vhd
+    Info (12022): Found design unit 1: dppsn_scheduler-rtl
+    Info (12023): Found entity 1: dppsn_scheduler
+Info (12127): Elaborating entity "dppsn_scheduler" for the top level hierarchy
+Warning (10492): VHDL Process Statement warning at dppsn_scheduler.vhd(95): signal "s_quantum0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dppsn_scheduler.vhd(97): signal "s_quantum1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dppsn_scheduler.vhd(99): signal "s_quantum2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dppsn_scheduler.vhd(101): signal "s_quantum3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "s_deficit3[12]" is converted into an equivalent circuit using register "s_deficit3[12]~_emulated" and latch "s_deficit3[12]~1"
+    Warning (13310): Register "s_deficit3[11]" is converted into an equivalent circuit using register "s_deficit3[11]~_emulated" and latch "s_deficit3[11]~5"
+    Warning (13310): Register "s_deficit3[10]" is converted into an equivalent circuit using register "s_deficit3[10]~_emulated" and latch "s_deficit3[10]~9"
+    Warning (13310): Register "s_deficit3[9]" is converted into an equivalent circuit using register "s_deficit3[9]~_emulated" and latch "s_deficit3[9]~13"
+    Warning (13310): Register "s_deficit3[8]" is converted into an equivalent circuit using register "s_deficit3[8]~_emulated" and latch "s_deficit3[8]~17"
+    Warning (13310): Register "s_deficit3[7]" is converted into an equivalent circuit using register "s_deficit3[7]~_emulated" and latch "s_deficit3[7]~21"
+    Warning (13310): Register "s_deficit3[6]" is converted into an equivalent circuit using register "s_deficit3[6]~_emulated" and latch "s_deficit3[6]~25"
+    Warning (13310): Register "s_deficit0[12]" is converted into an equivalent circuit using register "s_deficit0[12]~_emulated" and latch "s_deficit0[12]~1"
+    Warning (13310): Register "s_deficit0[11]" is converted into an equivalent circuit using register "s_deficit0[11]~_emulated" and latch "s_deficit0[11]~5"
+    Warning (13310): Register "s_deficit0[10]" is converted into an equivalent circuit using register "s_deficit0[10]~_emulated" and latch "s_deficit0[10]~9"
+    Warning (13310): Register "s_deficit0[9]" is converted into an equivalent circuit using register "s_deficit0[9]~_emulated" and latch "s_deficit0[9]~13"
+    Warning (13310): Register "s_deficit0[8]" is converted into an equivalent circuit using register "s_deficit0[8]~_emulated" and latch "s_deficit0[8]~17"
+    Warning (13310): Register "s_deficit0[7]" is converted into an equivalent circuit using register "s_deficit0[7]~_emulated" and latch "s_deficit0[7]~21"
+    Warning (13310): Register "s_deficit0[6]" is converted into an equivalent circuit using register "s_deficit0[6]~_emulated" and latch "s_deficit0[6]~25"
+    Warning (13310): Register "s_deficit1[12]" is converted into an equivalent circuit using register "s_deficit1[12]~_emulated" and latch "s_deficit1[12]~1"
+    Warning (13310): Register "s_deficit1[11]" is converted into an equivalent circuit using register "s_deficit1[11]~_emulated" and latch "s_deficit1[11]~5"
+    Warning (13310): Register "s_deficit1[10]" is converted into an equivalent circuit using register "s_deficit1[10]~_emulated" and latch "s_deficit1[10]~9"
+    Warning (13310): Register "s_deficit1[9]" is converted into an equivalent circuit using register "s_deficit1[9]~_emulated" and latch "s_deficit1[9]~13"
+    Warning (13310): Register "s_deficit1[8]" is converted into an equivalent circuit using register "s_deficit1[8]~_emulated" and latch "s_deficit1[8]~17"
+    Warning (13310): Register "s_deficit1[7]" is converted into an equivalent circuit using register "s_deficit1[7]~_emulated" and latch "s_deficit1[7]~21"
+    Warning (13310): Register "s_deficit1[6]" is converted into an equivalent circuit using register "s_deficit1[6]~_emulated" and latch "s_deficit1[6]~25"
+    Warning (13310): Register "s_deficit2[12]" is converted into an equivalent circuit using register "s_deficit2[12]~_emulated" and latch "s_deficit2[12]~1"
+    Warning (13310): Register "s_deficit2[11]" is converted into an equivalent circuit using register "s_deficit2[11]~_emulated" and latch "s_deficit2[11]~5"
+    Warning (13310): Register "s_deficit2[10]" is converted into an equivalent circuit using register "s_deficit2[10]~_emulated" and latch "s_deficit2[10]~9"
+    Warning (13310): Register "s_deficit2[9]" is converted into an equivalent circuit using register "s_deficit2[9]~_emulated" and latch "s_deficit2[9]~13"
+    Warning (13310): Register "s_deficit2[8]" is converted into an equivalent circuit using register "s_deficit2[8]~_emulated" and latch "s_deficit2[8]~17"
+    Warning (13310): Register "s_deficit2[7]" is converted into an equivalent circuit using register "s_deficit2[7]~_emulated" and latch "s_deficit2[7]~21"
+    Warning (13310): Register "s_deficit2[6]" is converted into an equivalent circuit using register "s_deficit2[6]~_emulated" and latch "s_deficit2[6]~25"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "csr_waitrequest" is stuck at GND
+    Warning (13410): Pin "out_channel[4]" is stuck at GND
+    Warning (13410): Pin "out_channel[5]" is stuck at GND
+    Warning (13410): Pin "out_channel[6]" is stuck at GND
+    Warning (13410): Pin "out_channel[7]" is stuck at GND
+    Warning (13410): Pin "out_channel[8]" is stuck at GND
+    Warning (13410): Pin "out_channel[9]" is stuck at GND
+    Warning (13410): Pin "out_channel[10]" is stuck at GND
+    Warning (13410): Pin "out_channel[11]" is stuck at GND
+    Warning (13410): Pin "out_channel[12]" is stuck at GND
+    Warning (13410): Pin "out_channel[13]" is stuck at GND
+    Warning (13410): Pin "out_channel[14]" is stuck at GND
+    Warning (13410): Pin "out_channel[15]" is stuck at GND
+    Warning (13410): Pin "out_channel[16]" is stuck at GND
+    Warning (13410): Pin "out_channel[17]" is stuck at GND
+    Warning (13410): Pin "out_channel[18]" is stuck at GND
+    Warning (13410): Pin "out_channel[19]" is stuck at GND
+    Warning (13410): Pin "out_channel[20]" is stuck at GND
+    Warning (13410): Pin "out_channel[21]" is stuck at GND
+    Warning (13410): Pin "out_channel[22]" is stuck at GND
+    Warning (13410): Pin "out_channel[23]" is stuck at GND
+    Warning (13410): Pin "out_channel[24]" is stuck at GND
+    Warning (13410): Pin "out_channel[25]" is stuck at GND
+    Warning (13410): Pin "out_channel[26]" is stuck at GND
+    Warning (13410): Pin "out_channel[27]" is stuck at GND
+    Warning (13410): Pin "out_channel[28]" is stuck at GND
+    Warning (13410): Pin "out_channel[29]" is stuck at GND
+    Warning (13410): Pin "out_channel[30]" is stuck at GND
+    Warning (13410): Pin "out_channel[31]" is stuck at GND
+    Warning (13410): Pin "out_channel[32]" is stuck at GND
+    Warning (13410): Pin "out_channel[33]" is stuck at GND
+    Warning (13410): Pin "out_channel[34]" is stuck at GND
+    Warning (13410): Pin "out_channel[35]" is stuck at GND
+    Warning (13410): Pin "out_channel[36]" is stuck at GND
+    Warning (13410): Pin "out_channel[37]" is stuck at GND
+    Warning (13410): Pin "out_channel[38]" is stuck at GND
+    Warning (13410): Pin "out_channel[39]" is stuck at GND
+    Warning (13410): Pin "out_channel[40]" is stuck at GND
+    Warning (13410): Pin "out_channel[41]" is stuck at GND
+    Warning (13410): Pin "out_channel[42]" is stuck at GND
+    Warning (13410): Pin "out_channel[43]" is stuck at GND
+    Warning (13410): Pin "out_channel[44]" is stuck at GND
+    Warning (13410): Pin "out_channel[45]" is stuck at GND
+    Warning (13410): Pin "out_channel[46]" is stuck at GND
+    Warning (13410): Pin "out_channel[47]" is stuck at GND
+    Warning (13410): Pin "out_channel[48]" is stuck at GND
+    Warning (13410): Pin "out_channel[49]" is stuck at GND
+    Warning (13410): Pin "out_channel[50]" is stuck at GND
+    Warning (13410): Pin "out_channel[51]" is stuck at GND
+    Warning (13410): Pin "out_channel[52]" is stuck at GND
+    Warning (13410): Pin "out_channel[53]" is stuck at GND
+    Warning (13410): Pin "out_channel[54]" is stuck at GND
+    Warning (13410): Pin "out_channel[55]" is stuck at GND
+    Warning (13410): Pin "out_channel[56]" is stuck at GND
+    Warning (13410): Pin "out_channel[57]" is stuck at GND
+    Warning (13410): Pin "out_channel[58]" is stuck at GND
+    Warning (13410): Pin "out_channel[59]" is stuck at GND
+    Warning (13410): Pin "out_channel[60]" is stuck at GND
+    Warning (13410): Pin "out_channel[61]" is stuck at GND
+    Warning (13410): Pin "out_channel[62]" is stuck at GND
+    Warning (13410): Pin "out_channel[63]" is stuck at GND
+    Warning (13410): Pin "out_channel[64]" is stuck at GND
+    Warning (13410): Pin "out_channel[65]" is stuck at GND
+    Warning (13410): Pin "out_channel[66]" is stuck at GND
+    Warning (13410): Pin "out_channel[67]" is stuck at GND
+    Warning (13410): Pin "out_channel[68]" is stuck at GND
+    Warning (13410): Pin "out_channel[69]" is stuck at GND
+    Warning (13410): Pin "out_channel[70]" is stuck at GND
+    Warning (13410): Pin "out_channel[71]" is stuck at GND
+    Warning (13410): Pin "out_channel[72]" is stuck at GND
+    Warning (13410): Pin "out_channel[73]" is stuck at GND
+    Warning (13410): Pin "out_channel[74]" is stuck at GND
+    Warning (13410): Pin "out_channel[75]" is stuck at GND
+    Warning (13410): Pin "out_channel[76]" is stuck at GND
+    Warning (13410): Pin "out_channel[77]" is stuck at GND
+    Warning (13410): Pin "out_channel[78]" is stuck at GND
+    Warning (13410): Pin "out_channel[79]" is stuck at GND
+    Warning (13410): Pin "out_channel[80]" is stuck at GND
+    Warning (13410): Pin "out_channel[81]" is stuck at GND
+    Warning (13410): Pin "out_channel[82]" is stuck at GND
+    Warning (13410): Pin "out_channel[83]" is stuck at GND
+    Warning (13410): Pin "out_channel[84]" is stuck at GND
+    Warning (13410): Pin "out_channel[85]" is stuck at GND
+    Warning (13410): Pin "out_channel[86]" is stuck at GND
+    Warning (13410): Pin "out_channel[87]" is stuck at GND
+    Warning (13410): Pin "out_channel[88]" is stuck at GND
+    Warning (13410): Pin "out_channel[89]" is stuck at GND
+    Warning (13410): Pin "out_channel[90]" is stuck at GND
+    Warning (13410): Pin "out_channel[91]" is stuck at GND
+    Warning (13410): Pin "out_channel[92]" is stuck at GND
+    Warning (13410): Pin "out_channel[93]" is stuck at GND
+    Warning (13410): Pin "out_channel[94]" is stuck at GND
+    Warning (13410): Pin "out_channel[95]" is stuck at GND
+    Warning (13410): Pin "out_channel[96]" is stuck at GND
+    Warning (13410): Pin "out_channel[97]" is stuck at GND
+    Warning (13410): Pin "out_channel[98]" is stuck at GND
+    Warning (13410): Pin "out_channel[99]" is stuck at GND
+    Warning (13410): Pin "out_channel[100]" is stuck at GND
+    Warning (13410): Pin "out_channel[101]" is stuck at GND
+    Warning (13410): Pin "out_channel[102]" is stuck at GND
+    Warning (13410): Pin "out_channel[103]" is stuck at GND
+    Warning (13410): Pin "out_channel[104]" is stuck at GND
+    Warning (13410): Pin "out_channel[105]" is stuck at GND
+    Warning (13410): Pin "out_channel[106]" is stuck at GND
+    Warning (13410): Pin "out_channel[107]" is stuck at GND
+    Warning (13410): Pin "out_channel[108]" is stuck at GND
+    Warning (13410): Pin "out_channel[109]" is stuck at GND
+    Warning (13410): Pin "out_channel[110]" is stuck at GND
+    Warning (13410): Pin "out_channel[111]" is stuck at GND
+    Warning (13410): Pin "out_channel[112]" is stuck at GND
+    Warning (13410): Pin "out_channel[113]" is stuck at GND
+    Warning (13410): Pin "out_channel[114]" is stuck at GND
+    Warning (13410): Pin "out_channel[115]" is stuck at GND
+    Warning (13410): Pin "out_channel[116]" is stuck at GND
+    Warning (13410): Pin "out_channel[117]" is stuck at GND
+    Warning (13410): Pin "out_channel[118]" is stuck at GND
+    Warning (13410): Pin "out_channel[119]" is stuck at GND
+    Warning (13410): Pin "out_channel[120]" is stuck at GND
+    Warning (13410): Pin "out_channel[121]" is stuck at GND
+    Warning (13410): Pin "out_channel[122]" is stuck at GND
+    Warning (13410): Pin "out_channel[123]" is stuck at GND
+    Warning (13410): Pin "out_channel[124]" is stuck at GND
+    Warning (13410): Pin "out_channel[125]" is stuck at GND
+    Warning (13410): Pin "out_channel[126]" is stuck at GND
+    Warning (13410): Pin "out_channel[127]" is stuck at GND
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 17 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "csr_address[0]"
+    Warning (15610): No output dependent on input pin "csr_address[1]"
+    Warning (15610): No output dependent on input pin "csr_address[2]"
+    Warning (15610): No output dependent on input pin "csr_address[3]"
+    Warning (15610): No output dependent on input pin "csr_address[4]"
+    Warning (15610): No output dependent on input pin "csr_address[5]"
+    Warning (15610): No output dependent on input pin "csr_address[6]"
+    Warning (15610): No output dependent on input pin "csr_address[7]"
+    Warning (15610): No output dependent on input pin "csr_address[8]"
+    Warning (15610): No output dependent on input pin "csr_address[9]"
+    Warning (15610): No output dependent on input pin "csr_address[10]"
+    Warning (15610): No output dependent on input pin "csr_address[11]"
+    Warning (15610): No output dependent on input pin "csr_address[12]"
+    Warning (15610): No output dependent on input pin "csr_address[13]"
+    Warning (15610): No output dependent on input pin "csr_address[14]"
+    Warning (15610): No output dependent on input pin "csr_address[15]"
+    Warning (15610): No output dependent on input pin "csr_read"
+Info (21057): Implemented 1088 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 335 input pins
+    Info (21059): Implemented 235 output pins
+    Info (21061): Implemented 518 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 178 warnings
+    Info: Peak virtual memory: 4629 megabytes
+    Info: Processing ended: Tue Jan 14 14:50:18 2020
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
+
+

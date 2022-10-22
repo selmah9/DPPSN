@@ -1,0 +1,520 @@
+Analysis & Synthesis report for dppsn_match_action_table
+Tue Jan 14 14:11:19 2020
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Jan 14 14:11:19 2020           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; dppsn_match_action_table                        ;
+; Top-level Entity Name              ; dppsn_match_action_table                        ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 11,899                                          ;
+;     Total combinational functions  ; 11,364                                          ;
+;     Dedicated logic registers      ; 5,226                                           ;
+; Total registers                    ; 5226                                            ;
+; Total pins                         ; 485                                             ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                                    ;
++----------------------------------------------------------------------------+--------------------------+--------------------------+
+; Option                                                                     ; Setting                  ; Default Value            ;
++----------------------------------------------------------------------------+--------------------------+--------------------------+
+; Device                                                                     ; EP2C70F896C6             ;                          ;
+; Top-level entity name                                                      ; dppsn_match_action_table ; dppsn_match_action_table ;
+; Family name                                                                ; Cyclone II               ; Cyclone IV GX            ;
+; Use smart compilation                                                      ; Off                      ; Off                      ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                       ; On                       ;
+; Enable compact report table                                                ; Off                      ; Off                      ;
+; Restructure Multiplexers                                                   ; Auto                     ; Auto                     ;
+; Create Debugging Nodes for IP Cores                                        ; Off                      ; Off                      ;
+; Preserve fewer node names                                                  ; On                       ; On                       ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                      ; Off                      ;
+; Verilog Version                                                            ; Verilog_2001             ; Verilog_2001             ;
+; VHDL Version                                                               ; VHDL_1993                ; VHDL_1993                ;
+; State Machine Processing                                                   ; Auto                     ; Auto                     ;
+; Safe State Machine                                                         ; Off                      ; Off                      ;
+; Extract Verilog State Machines                                             ; On                       ; On                       ;
+; Extract VHDL State Machines                                                ; On                       ; On                       ;
+; Ignore Verilog initial constructs                                          ; Off                      ; Off                      ;
+; Iteration limit for constant Verilog loops                                 ; 5000                     ; 5000                     ;
+; Iteration limit for non-constant Verilog loops                             ; 250                      ; 250                      ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                       ; On                       ;
+; Infer RAMs from Raw Logic                                                  ; On                       ; On                       ;
+; Parallel Synthesis                                                         ; On                       ; On                       ;
+; DSP Block Balancing                                                        ; Auto                     ; Auto                     ;
+; NOT Gate Push-Back                                                         ; On                       ; On                       ;
+; Power-Up Don't Care                                                        ; On                       ; On                       ;
+; Remove Redundant Logic Cells                                               ; Off                      ; Off                      ;
+; Remove Duplicate Registers                                                 ; On                       ; On                       ;
+; Ignore CARRY Buffers                                                       ; Off                      ; Off                      ;
+; Ignore CASCADE Buffers                                                     ; Off                      ; Off                      ;
+; Ignore GLOBAL Buffers                                                      ; Off                      ; Off                      ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                      ; Off                      ;
+; Ignore LCELL Buffers                                                       ; Off                      ; Off                      ;
+; Ignore SOFT Buffers                                                        ; On                       ; On                       ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                      ; Off                      ;
+; Optimization Technique                                                     ; Balanced                 ; Balanced                 ;
+; Carry Chain Length                                                         ; 70                       ; 70                       ;
+; Auto Carry Chains                                                          ; On                       ; On                       ;
+; Auto Open-Drain Pins                                                       ; On                       ; On                       ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                      ; Off                      ;
+; Auto ROM Replacement                                                       ; On                       ; On                       ;
+; Auto RAM Replacement                                                       ; On                       ; On                       ;
+; Auto Shift Register Replacement                                            ; Auto                     ; Auto                     ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto                     ; Auto                     ;
+; Auto Clock Enable Replacement                                              ; On                       ; On                       ;
+; Strict RAM Replacement                                                     ; Off                      ; Off                      ;
+; Allow Synchronous Control Signals                                          ; On                       ; On                       ;
+; Force Use of Synchronous Clear Signals                                     ; Off                      ; Off                      ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                      ; Off                      ;
+; Auto Resource Sharing                                                      ; Off                      ; Off                      ;
+; Allow Any RAM Size For Recognition                                         ; Off                      ; Off                      ;
+; Allow Any ROM Size For Recognition                                         ; Off                      ; Off                      ;
+; Allow Any Shift Register Size For Recognition                              ; Off                      ; Off                      ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                       ; On                       ;
+; Ignore translate_off and synthesis_off directives                          ; Off                      ; Off                      ;
+; Timing-Driven Synthesis                                                    ; Off                      ; Off                      ;
+; Report Parameter Settings                                                  ; On                       ; On                       ;
+; Report Source Assignments                                                  ; On                       ; On                       ;
+; Report Connectivity Checks                                                 ; On                       ; On                       ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                      ; Off                      ;
+; Synchronization Register Chain Length                                      ; 2                        ; 2                        ;
+; PowerPlay Power Optimization                                               ; Normal compilation       ; Normal compilation       ;
+; HDL message level                                                          ; Level2                   ; Level2                   ;
+; Suppress Register Optimization Related Messages                            ; Off                      ; Off                      ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000                     ; 5000                     ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000                     ; 5000                     ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                      ; 100                      ;
+; Clock MUX Protection                                                       ; On                       ; On                       ;
+; Auto Gated Clock Conversion                                                ; Off                      ; Off                      ;
+; Block Design Naming                                                        ; Auto                     ; Auto                     ;
+; SDC constraint protection                                                  ; Off                      ; Off                      ;
+; Synthesis Effort                                                           ; Auto                     ; Auto                     ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                       ; On                       ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                      ; Off                      ;
+; Analysis & Synthesis Message Level                                         ; Medium                   ; Medium                   ;
+; Disable Register Merging Across Hierarchies                                ; Auto                     ; Auto                     ;
+; Resource Aware Inference For Block RAM                                     ; On                       ; On                       ;
+; Synthesis Seed                                                             ; 1                        ; 1                        ;
++----------------------------------------------------------------------------+--------------------------+--------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                          ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                   ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+---------+
+; dppsn_match_action_table.vhd     ; yes             ; User VHDL File  ; C:/Users/EliteBook/Desktop/Arhitekture paketskih cvorista - Projekat 3 - DPPNS/Match-Action Table/dppsn_match_action_table.vhd ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 11,899      ;
+;                                             ;             ;
+; Total combinational functions               ; 11364       ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 5552        ;
+;     -- 3 input functions                    ; 5680        ;
+;     -- <=2 input functions                  ; 132         ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 11334       ;
+;     -- arithmetic mode                      ; 30          ;
+;                                             ;             ;
+; Total registers                             ; 5226        ;
+;     -- Dedicated logic registers            ; 5226        ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 485         ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+; Maximum fan-out node                        ; csr_clk_clk ;
+; Maximum fan-out                             ; 4608        ;
+; Total fan-out                               ; 55340       ;
+; Average fan-out                             ; 3.24        ;
++---------------------------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                               ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name       ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+--------------+
+; |dppsn_match_action_table  ; 11364 (11364)     ; 5226 (5226)  ; 0           ; 0            ; 0       ; 0         ; 485  ; 0            ; |dppsn_match_action_table ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; s_channel[32..127]                     ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 96 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 5226  ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 4710  ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 548   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------+
+; Inverted Register Statistics                         ;
++--------------------------------------------+---------+
+; Inverted Register                          ; Fan out ;
++--------------------------------------------+---------+
+; s_mask_table[6][64]                        ; 3       ;
+; s_mask_table[10][64]                       ; 3       ;
+; s_mask_table[2][64]                        ; 3       ;
+; s_mask_table[14][64]                       ; 3       ;
+; s_mask_table[9][64]                        ; 3       ;
+; s_mask_table[5][64]                        ; 3       ;
+; s_mask_table[1][64]                        ; 3       ;
+; s_mask_table[13][64]                       ; 3       ;
+; s_mask_table[4][64]                        ; 3       ;
+; s_mask_table[8][64]                        ; 3       ;
+; s_mask_table[0][64]                        ; 3       ;
+; s_mask_table[12][64]                       ; 3       ;
+; s_mask_table[11][64]                       ; 3       ;
+; s_mask_table[7][64]                        ; 3       ;
+; s_mask_table[3][64]                        ; 3       ;
+; s_mask_table[15][64]                       ; 3       ;
+; s_mask_table[6][32]                        ; 3       ;
+; s_mask_table[5][32]                        ; 3       ;
+; s_mask_table[4][32]                        ; 3       ;
+; s_mask_table[7][32]                        ; 3       ;
+; s_mask_table[9][32]                        ; 3       ;
+; s_mask_table[10][32]                       ; 3       ;
+; s_mask_table[8][32]                        ; 3       ;
+; s_mask_table[11][32]                       ; 3       ;
+; s_mask_table[1][32]                        ; 3       ;
+; s_mask_table[2][32]                        ; 3       ;
+; s_mask_table[0][32]                        ; 3       ;
+; s_mask_table[3][32]                        ; 3       ;
+; s_mask_table[14][32]                       ; 3       ;
+; s_mask_table[13][32]                       ; 3       ;
+; s_mask_table[12][32]                       ; 3       ;
+; s_mask_table[15][32]                       ; 3       ;
+; s_mask_table[10][96]                       ; 3       ;
+; s_mask_table[9][96]                        ; 3       ;
+; s_mask_table[8][96]                        ; 3       ;
+; s_mask_table[11][96]                       ; 3       ;
+; s_mask_table[5][96]                        ; 3       ;
+; s_mask_table[6][96]                        ; 3       ;
+; s_mask_table[4][96]                        ; 3       ;
+; s_mask_table[7][96]                        ; 3       ;
+; s_mask_table[2][96]                        ; 3       ;
+; s_mask_table[1][96]                        ; 3       ;
+; s_mask_table[0][96]                        ; 3       ;
+; s_mask_table[3][96]                        ; 3       ;
+; s_mask_table[13][96]                       ; 3       ;
+; s_mask_table[14][96]                       ; 3       ;
+; s_mask_table[12][96]                       ; 3       ;
+; s_mask_table[15][96]                       ; 3       ;
+; s_mask_table[5][0]                         ; 3       ;
+; s_mask_table[9][0]                         ; 3       ;
+; s_mask_table[1][0]                         ; 3       ;
+; s_mask_table[13][0]                        ; 3       ;
+; s_mask_table[10][0]                        ; 3       ;
+; s_mask_table[6][0]                         ; 3       ;
+; s_mask_table[2][0]                         ; 3       ;
+; s_mask_table[14][0]                        ; 3       ;
+; s_mask_table[8][0]                         ; 3       ;
+; s_mask_table[4][0]                         ; 3       ;
+; s_mask_table[0][0]                         ; 3       ;
+; s_mask_table[12][0]                        ; 3       ;
+; s_mask_table[7][0]                         ; 3       ;
+; s_mask_table[11][0]                        ; 3       ;
+; s_mask_table[3][0]                         ; 3       ;
+; s_mask_table[15][0]                        ; 3       ;
+; s_mask_table[6][65]                        ; 3       ;
+; s_mask_table[10][65]                       ; 3       ;
+; s_mask_table[2][65]                        ; 3       ;
+; s_mask_table[14][65]                       ; 3       ;
+; s_mask_table[9][65]                        ; 3       ;
+; s_mask_table[5][65]                        ; 3       ;
+; s_mask_table[1][65]                        ; 3       ;
+; s_mask_table[13][65]                       ; 3       ;
+; s_mask_table[4][65]                        ; 3       ;
+; s_mask_table[8][65]                        ; 3       ;
+; s_mask_table[0][65]                        ; 3       ;
+; s_mask_table[12][65]                       ; 3       ;
+; s_mask_table[11][65]                       ; 3       ;
+; s_mask_table[7][65]                        ; 3       ;
+; s_mask_table[3][65]                        ; 3       ;
+; s_mask_table[15][65]                       ; 3       ;
+; s_mask_table[6][33]                        ; 3       ;
+; s_mask_table[5][33]                        ; 3       ;
+; s_mask_table[4][33]                        ; 3       ;
+; s_mask_table[7][33]                        ; 3       ;
+; s_mask_table[9][33]                        ; 3       ;
+; s_mask_table[10][33]                       ; 3       ;
+; s_mask_table[8][33]                        ; 3       ;
+; s_mask_table[11][33]                       ; 3       ;
+; s_mask_table[1][33]                        ; 3       ;
+; s_mask_table[2][33]                        ; 3       ;
+; s_mask_table[0][33]                        ; 3       ;
+; s_mask_table[3][33]                        ; 3       ;
+; s_mask_table[14][33]                       ; 3       ;
+; s_mask_table[13][33]                       ; 3       ;
+; s_mask_table[12][33]                       ; 3       ;
+; s_mask_table[15][33]                       ; 3       ;
+; s_mask_table[10][97]                       ; 3       ;
+; s_mask_table[9][97]                        ; 3       ;
+; s_mask_table[8][97]                        ; 3       ;
+; s_mask_table[11][97]                       ; 3       ;
+; Total number of inverted registers = 2048* ;         ;
++--------------------------------------------+---------+
+* Table truncated at 100 items. To change the number of inverted registers reported, set the "Number of Inverted Registers Reported" option under Assignments->Settings->Analysis and Synthesis Settings->More Settings
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+; 17:1               ; 32 bits   ; 352 LEs       ; 352 LEs              ; 0 LEs                  ; Yes        ; |dppsn_match_action_table|s_channel[6]               ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; No         ; |dppsn_match_action_table|s_counter_table.raddr_b[0] ;
+; 199:1              ; 32 bits   ; 4224 LEs      ; 3104 LEs             ; 1120 LEs               ; No         ; |dppsn_match_action_table|Mux4923                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:15:06     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Jan 14 13:56:01 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off dppsn_match_action_table -c dppsn_match_action_table
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file dppsn_match_action_table.vhd
+    Info (12022): Found design unit 1: dppsn_match_action_table-rtl
+    Info (12023): Found entity 1: dppsn_match_action_table
+Info (12127): Elaborating entity "dppsn_match_action_table" for the top level hierarchy
+Warning (10492): VHDL Process Statement warning at dppsn_match_action_table.vhd(99): signal "s_csr_address_offset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dppsn_match_action_table.vhd(101): signal "s_data_table" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dppsn_match_action_table.vhd(101): signal "s_csr_address_base" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dppsn_match_action_table.vhd(103): signal "s_data_table" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dppsn_match_action_table.vhd(103): signal "s_csr_address_base" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dppsn_match_action_table.vhd(105): signal "s_data_table" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dppsn_match_action_table.vhd(105): signal "s_csr_address_base" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dppsn_match_action_table.vhd(107): signal "s_data_table" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dppsn_match_action_table.vhd(107): signal "s_csr_address_base" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dppsn_match_action_table.vhd(109): signal "s_mask_table" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dppsn_match_action_table.vhd(109): signal "s_csr_address_base" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dppsn_match_action_table.vhd(111): signal "s_mask_table" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dppsn_match_action_table.vhd(111): signal "s_csr_address_base" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dppsn_match_action_table.vhd(113): signal "s_mask_table" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dppsn_match_action_table.vhd(113): signal "s_csr_address_base" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dppsn_match_action_table.vhd(115): signal "s_mask_table" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dppsn_match_action_table.vhd(115): signal "s_csr_address_base" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dppsn_match_action_table.vhd(117): signal "s_action_table" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dppsn_match_action_table.vhd(117): signal "s_csr_address_base" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dppsn_match_action_table.vhd(119): signal "s_counter_table" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dppsn_match_action_table.vhd(119): signal "s_csr_address_base" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "s_counter_table" is uninferred due to asynchronous read logic
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "csr_waitrequest" is stuck at GND
+    Warning (13410): Pin "out_channel[32]" is stuck at GND
+    Warning (13410): Pin "out_channel[33]" is stuck at GND
+    Warning (13410): Pin "out_channel[34]" is stuck at GND
+    Warning (13410): Pin "out_channel[35]" is stuck at GND
+    Warning (13410): Pin "out_channel[36]" is stuck at GND
+    Warning (13410): Pin "out_channel[37]" is stuck at GND
+    Warning (13410): Pin "out_channel[38]" is stuck at GND
+    Warning (13410): Pin "out_channel[39]" is stuck at GND
+    Warning (13410): Pin "out_channel[40]" is stuck at GND
+    Warning (13410): Pin "out_channel[41]" is stuck at GND
+    Warning (13410): Pin "out_channel[42]" is stuck at GND
+    Warning (13410): Pin "out_channel[43]" is stuck at GND
+    Warning (13410): Pin "out_channel[44]" is stuck at GND
+    Warning (13410): Pin "out_channel[45]" is stuck at GND
+    Warning (13410): Pin "out_channel[46]" is stuck at GND
+    Warning (13410): Pin "out_channel[47]" is stuck at GND
+    Warning (13410): Pin "out_channel[48]" is stuck at GND
+    Warning (13410): Pin "out_channel[49]" is stuck at GND
+    Warning (13410): Pin "out_channel[50]" is stuck at GND
+    Warning (13410): Pin "out_channel[51]" is stuck at GND
+    Warning (13410): Pin "out_channel[52]" is stuck at GND
+    Warning (13410): Pin "out_channel[53]" is stuck at GND
+    Warning (13410): Pin "out_channel[54]" is stuck at GND
+    Warning (13410): Pin "out_channel[55]" is stuck at GND
+    Warning (13410): Pin "out_channel[56]" is stuck at GND
+    Warning (13410): Pin "out_channel[57]" is stuck at GND
+    Warning (13410): Pin "out_channel[58]" is stuck at GND
+    Warning (13410): Pin "out_channel[59]" is stuck at GND
+    Warning (13410): Pin "out_channel[60]" is stuck at GND
+    Warning (13410): Pin "out_channel[61]" is stuck at GND
+    Warning (13410): Pin "out_channel[62]" is stuck at GND
+    Warning (13410): Pin "out_channel[63]" is stuck at GND
+    Warning (13410): Pin "out_channel[64]" is stuck at GND
+    Warning (13410): Pin "out_channel[65]" is stuck at GND
+    Warning (13410): Pin "out_channel[66]" is stuck at GND
+    Warning (13410): Pin "out_channel[67]" is stuck at GND
+    Warning (13410): Pin "out_channel[68]" is stuck at GND
+    Warning (13410): Pin "out_channel[69]" is stuck at GND
+    Warning (13410): Pin "out_channel[70]" is stuck at GND
+    Warning (13410): Pin "out_channel[71]" is stuck at GND
+    Warning (13410): Pin "out_channel[72]" is stuck at GND
+    Warning (13410): Pin "out_channel[73]" is stuck at GND
+    Warning (13410): Pin "out_channel[74]" is stuck at GND
+    Warning (13410): Pin "out_channel[75]" is stuck at GND
+    Warning (13410): Pin "out_channel[76]" is stuck at GND
+    Warning (13410): Pin "out_channel[77]" is stuck at GND
+    Warning (13410): Pin "out_channel[78]" is stuck at GND
+    Warning (13410): Pin "out_channel[79]" is stuck at GND
+    Warning (13410): Pin "out_channel[80]" is stuck at GND
+    Warning (13410): Pin "out_channel[81]" is stuck at GND
+    Warning (13410): Pin "out_channel[82]" is stuck at GND
+    Warning (13410): Pin "out_channel[83]" is stuck at GND
+    Warning (13410): Pin "out_channel[84]" is stuck at GND
+    Warning (13410): Pin "out_channel[85]" is stuck at GND
+    Warning (13410): Pin "out_channel[86]" is stuck at GND
+    Warning (13410): Pin "out_channel[87]" is stuck at GND
+    Warning (13410): Pin "out_channel[88]" is stuck at GND
+    Warning (13410): Pin "out_channel[89]" is stuck at GND
+    Warning (13410): Pin "out_channel[90]" is stuck at GND
+    Warning (13410): Pin "out_channel[91]" is stuck at GND
+    Warning (13410): Pin "out_channel[92]" is stuck at GND
+    Warning (13410): Pin "out_channel[93]" is stuck at GND
+    Warning (13410): Pin "out_channel[94]" is stuck at GND
+    Warning (13410): Pin "out_channel[95]" is stuck at GND
+    Warning (13410): Pin "out_channel[96]" is stuck at GND
+    Warning (13410): Pin "out_channel[97]" is stuck at GND
+    Warning (13410): Pin "out_channel[98]" is stuck at GND
+    Warning (13410): Pin "out_channel[99]" is stuck at GND
+    Warning (13410): Pin "out_channel[100]" is stuck at GND
+    Warning (13410): Pin "out_channel[101]" is stuck at GND
+    Warning (13410): Pin "out_channel[102]" is stuck at GND
+    Warning (13410): Pin "out_channel[103]" is stuck at GND
+    Warning (13410): Pin "out_channel[104]" is stuck at GND
+    Warning (13410): Pin "out_channel[105]" is stuck at GND
+    Warning (13410): Pin "out_channel[106]" is stuck at GND
+    Warning (13410): Pin "out_channel[107]" is stuck at GND
+    Warning (13410): Pin "out_channel[108]" is stuck at GND
+    Warning (13410): Pin "out_channel[109]" is stuck at GND
+    Warning (13410): Pin "out_channel[110]" is stuck at GND
+    Warning (13410): Pin "out_channel[111]" is stuck at GND
+    Warning (13410): Pin "out_channel[112]" is stuck at GND
+    Warning (13410): Pin "out_channel[113]" is stuck at GND
+    Warning (13410): Pin "out_channel[114]" is stuck at GND
+    Warning (13410): Pin "out_channel[115]" is stuck at GND
+    Warning (13410): Pin "out_channel[116]" is stuck at GND
+    Warning (13410): Pin "out_channel[117]" is stuck at GND
+    Warning (13410): Pin "out_channel[118]" is stuck at GND
+    Warning (13410): Pin "out_channel[119]" is stuck at GND
+    Warning (13410): Pin "out_channel[120]" is stuck at GND
+    Warning (13410): Pin "out_channel[121]" is stuck at GND
+    Warning (13410): Pin "out_channel[122]" is stuck at GND
+    Warning (13410): Pin "out_channel[123]" is stuck at GND
+    Warning (13410): Pin "out_channel[124]" is stuck at GND
+    Warning (13410): Pin "out_channel[125]" is stuck at GND
+    Warning (13410): Pin "out_channel[126]" is stuck at GND
+    Warning (13410): Pin "out_channel[127]" is stuck at GND
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 7 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "csr_address[10]"
+    Warning (15610): No output dependent on input pin "csr_address[11]"
+    Warning (15610): No output dependent on input pin "csr_address[12]"
+    Warning (15610): No output dependent on input pin "csr_address[13]"
+    Warning (15610): No output dependent on input pin "csr_address[14]"
+    Warning (15610): No output dependent on input pin "csr_address[15]"
+    Warning (15610): No output dependent on input pin "csr_read"
+Info (21057): Implemented 12419 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 253 input pins
+    Info (21059): Implemented 232 output pins
+    Info (21061): Implemented 11934 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 128 warnings
+    Info: Peak virtual memory: 4740 megabytes
+    Info: Processing ended: Tue Jan 14 14:11:19 2020
+    Info: Elapsed time: 00:15:18
+    Info: Total CPU time (on all processors): 00:15:11
+
+

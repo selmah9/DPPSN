@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'clk_clk'
+Slack : -4.792
+TNS   : -498.507
+
+Type  : Slow Model Setup 'reset_reset_n'
+Slack : -1.468
+TNS   : -17.914
+
+Type  : Slow Model Hold 'clk_clk'
+Slack : 0.307
+TNS   : 0.000
+
+Type  : Slow Model Hold 'reset_reset_n'
+Slack : 0.479
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'clk_clk'
+Slack : -0.102
+TNS   : -1.346
+
+Type  : Slow Model Removal 'clk_clk'
+Slack : -0.047
+TNS   : -5.076
+
+Type  : Slow Model Minimum Pulse Width 'clk_clk'
+Slack : -1.380
+TNS   : -135.380
+
+Type  : Slow Model Minimum Pulse Width 'csr_clk_clk'
+Slack : -1.380
+TNS   : -33.380
+
+Type  : Slow Model Minimum Pulse Width 'reset_reset_n'
+Slack : -1.380
+TNS   : -1.380
+
+Type  : Fast Model Setup 'clk_clk'
+Slack : -1.885
+TNS   : -164.657
+
+Type  : Fast Model Setup 'reset_reset_n'
+Slack : -0.235
+TNS   : -0.494
+
+Type  : Fast Model Hold 'clk_clk'
+Slack : 0.001
+TNS   : 0.000
+
+Type  : Fast Model Hold 'reset_reset_n'
+Slack : 0.345
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'clk_clk'
+Slack : 0.224
+TNS   : 0.000
+
+Type  : Fast Model Removal 'clk_clk'
+Slack : -0.028
+TNS   : -3.024
+
+Type  : Fast Model Minimum Pulse Width 'clk_clk'
+Slack : -1.380
+TNS   : -135.380
+
+Type  : Fast Model Minimum Pulse Width 'csr_clk_clk'
+Slack : -1.380
+TNS   : -33.380
+
+Type  : Fast Model Minimum Pulse Width 'reset_reset_n'
+Slack : -1.380
+TNS   : -1.380
+
+------------------------------------------------------------

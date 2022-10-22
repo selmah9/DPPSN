@@ -1,0 +1,966 @@
+ -- Copyright (C) 1991-2013 Altera Corporation
+ -- Your use of Altera Corporation's design tools, logic functions 
+ -- and other software and tools, and its AMPP partner logic 
+ -- functions, and any output files from any of the foregoing 
+ -- (including device programming or simulation files), and any 
+ -- associated documentation or information are expressly subject 
+ -- to the terms and conditions of the Altera Program License 
+ -- Subscription Agreement, Altera MegaCore Function License 
+ -- Agreement, or other applicable license agreement, including, 
+ -- without limitation, that your use is for the sole purpose of 
+ -- programming logic devices manufactured by Altera and sold by 
+ -- Altera or its authorized distributors.  Please refer to the 
+ -- applicable agreement for further details.
+ -- 
+ -- This is a Quartus II output file. It is for reporting purposes only, and is
+ -- not intended for use as a Quartus II input file. This file cannot be used
+ -- to make Quartus II pin assignments - for instructions on how to make pin
+ -- assignments, please see Quartus II help.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- NC            : No Connect. This pin has no internal connection to the device.
+ -- DNU           : Do Not Use. This pin MUST NOT be connected.
+ -- VCCINT        : Dedicated power pin, which MUST be connected to VCC  (1.2V).
+ -- VCCIO         : Dedicated power pin, which MUST be connected to VCC
+ --                 of its bank.
+ --					Bank 1:		3.3V
+ --					Bank 2:		3.3V
+ --					Bank 3:		3.3V
+ --					Bank 4:		3.3V
+ --					Bank 5:		3.3V
+ --					Bank 6:		3.3V
+ --					Bank 7:		3.3V
+ --					Bank 8:		3.3V
+ -- GND           : Dedicated ground pin. Dedicated GND pins MUST be connected to GND.
+ --					It can also be used to report unused dedicated pins. The connection
+ --					on the board for unused dedicated pins depends on whether this will
+ --					be used in a future design. One example is device migration. When
+ --					using device migration, refer to the device pin-tables. If it is a
+ --					GND pin in the pin table or if it will not be used in a future design
+ --					for another purpose the it MUST be connected to GND. If it is an unused
+ --					dedicated pin, then it can be connected to a valid signal on the board
+ --					(low, high, or toggling) if that signal is required for a different
+ --					revision of the design.
+ -- GND+          : Unused input pin. It can also be used to report unused dual-purpose pins.
+ --					This pin should be connected to GND. It may also be connected  to a
+ --					valid signal  on the board  (low, high, or toggling)  if that signal
+ --					is required for a different revision of the design.
+ -- GND*          : Unused  I/O  pin. Connect each pin marked GND* directly to GND
+ --           	    or leave it unconnected.
+ -- RESERVED      : Unused I/O pin, which MUST be left unconnected.
+ -- RESERVED_INPUT    : Pin is tri-stated and should be connected to the board.
+ -- RESERVED_INPUT_WITH_WEAK_PULLUP    : Pin is tri-stated with internal weak pull-up resistor.
+ -- RESERVED_INPUT_WITH_BUS_HOLD       : Pin is tri-stated with bus-hold circuitry.
+ -- RESERVED_OUTPUT_DRIVEN_HIGH        : Pin is output driven high.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- Pin directions (input, output or bidir) are based on device operating in user mode.
+ ---------------------------------------------------------------------------------
+
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+CHIP  "dppsn_demux"  ASSIGNED TO AN: EP2C70F896C6
+
+Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
+-------------------------------------------------------------------------------------------------------------
+GND                          : A2        : gnd    :                   :         :           :                
+in_data[17]                  : A3        : input  : 3.3-V LVTTL       :         : 3         : N              
+VCCIO3                       : A4        : power  :                   : 3.3V    : 3         :                
+out2_data[59]                : A5        : output : 3.3-V LVTTL       :         : 3         : N              
+out2_data[40]                : A6        : output : 3.3-V LVTTL       :         : 3         : N              
+out1_data[59]                : A7        : output : 3.3-V LVTTL       :         : 3         : N              
+csr_readdata[29]             : A8        : output : 3.3-V LVTTL       :         : 3         : N              
+csr_writedata[13]            : A9        : input  : 3.3-V LVTTL       :         : 3         : N              
+in_channel[121]              : A10       : input  : 3.3-V LVTTL       :         : 3         : N              
+in_channel[29]               : A11       : input  : 3.3-V LVTTL       :         : 3         : N              
+in_channel[102]              : A12       : input  : 3.3-V LVTTL       :         : 3         : N              
+GND                          : A13       : gnd    :                   :         :           :                
+in_channel[65]               : A14       : input  : 3.3-V LVTTL       :         : 3         : N              
+VCCIO3                       : A15       : power  :                   : 3.3V    : 3         :                
+VCCIO4                       : A16       : power  :                   : 3.3V    : 4         :                
+in_data[31]                  : A17       : input  : 3.3-V LVTTL       :         : 4         : N              
+GND                          : A18       : gnd    :                   :         :           :                
+out0_data[12]                : A19       : output : 3.3-V LVTTL       :         : 4         : N              
+in_channel[92]               : A20       : input  : 3.3-V LVTTL       :         : 4         : N              
+in_channel[100]              : A21       : input  : 3.3-V LVTTL       :         : 4         : N              
+csr_writedata[20]            : A22       : input  : 3.3-V LVTTL       :         : 4         : N              
+out1_data[32]                : A23       : output : 3.3-V LVTTL       :         : 4         : N              
+in_data[32]                  : A24       : input  : 3.3-V LVTTL       :         : 4         : N              
+out3_data[47]                : A25       : output : 3.3-V LVTTL       :         : 4         : N              
+in_channel[114]              : A26       : input  : 3.3-V LVTTL       :         : 4         : N              
+VCCIO4                       : A27       : power  :                   : 3.3V    : 4         :                
+in_channel[75]               : A28       : input  : 3.3-V LVTTL       :         : 4         : N              
+GND                          : A29       : gnd    :                   :         :           :                
+in_channel[76]               : AA1       : input  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : AA2       :        :                   :         : 1         :                
+csr_readdata[4]              : AA3       : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : AA4       :        :                   :         : 1         :                
+out2_data[7]                 : AA5       : output : 3.3-V LVTTL       :         : 1         : N              
+out1_data[6]                 : AA6       : output : 3.3-V LVTTL       :         : 1         : N              
+out0_data[7]                 : AA7       : output : 3.3-V LVTTL       :         : 1         : N              
+out3_data[46]                : AA8       : output : 3.3-V LVTTL       :         : 1         : N              
+out2_data[26]                : AA9       : output : 3.3-V LVTTL       :         : 1         : N              
+out0_data[46]                : AA10      : output : 3.3-V LVTTL       :         : 1         : N              
+GND                          : AA11      : gnd    :                   :         :           :                
+GND                          : AA12      : gnd    :                   :         :           :                
+VCCINT                       : AA13      : power  :                   : 1.2V    :           :                
+VCCINT                       : AA14      : power  :                   : 1.2V    :           :                
+GND                          : AA15      : gnd    :                   :         :           :                
+GND                          : AA16      : gnd    :                   :         :           :                
+VCCINT                       : AA17      : power  :                   : 1.2V    :           :                
+VCCINT                       : AA18      : power  :                   : 1.2V    :           :                
+GND                          : AA19      : gnd    :                   :         :           :                
+GND                          : AA20      : gnd    :                   :         :           :                
+GND_PLL4                     : AA21      : gnd    :                   :         :           :                
+GND_PLL4                     : AA22      : gnd    :                   :         :           :                
+out0_data[61]                : AA23      : output : 3.3-V LVTTL       :         : 6         : N              
+in_data[56]                  : AA24      : input  : 3.3-V LVTTL       :         : 6         : N              
+out1_data[61]                : AA25      : output : 3.3-V LVTTL       :         : 6         : N              
+out0_data[57]                : AA26      : output : 3.3-V LVTTL       :         : 6         : N              
+out1_ready                   : AA27      : input  : 3.3-V LVTTL       :         : 6         : N              
+in_ready                     : AA28      : output : 3.3-V LVTTL       :         : 6         : N              
+in_channel[40]               : AA29      : input  : 3.3-V LVTTL       :         : 6         : N              
+out3_data[57]                : AA30      : output : 3.3-V LVTTL       :         : 6         : N              
+in_channel[101]              : AB1       : input  : 3.3-V LVTTL       :         : 1         : N              
+clk_clk                      : AB2       : input  : 3.3-V LVTTL       :         : 1         : N              
+VCCIO1                       : AB3       : power  :                   : 3.3V    : 1         :                
+GND                          : AB4       : gnd    :                   :         :           :                
+out1_data[7]                 : AB5       : output : 3.3-V LVTTL       :         : 1         : N              
+in_data[4]                   : AB6       : input  : 3.3-V LVTTL       :         : 1         : N              
+out2_data[24]                : AB7       : output : 3.3-V LVTTL       :         : 1         : N              
+GND_PLL1                     : AB8       : gnd    :                   :         :           :                
+VCCD_PLL1                    : AB9       : power  :                   : 1.2V    :           :                
+GND                          : AB10      : gnd    :                   :         :           :                
+VCCIO8                       : AB11      : power  :                   : 3.3V    : 8         :                
+GND*                         : AB12      :        :                   :         : 8         :                
+GND*                         : AB13      :        :                   :         : 8         :                
+GND                          : AB14      : gnd    :                   :         :           :                
+VCCIO8                       : AB15      : power  :                   : 3.3V    : 8         :                
+VCCIO7                       : AB16      : power  :                   : 3.3V    : 7         :                
+GND                          : AB17      : gnd    :                   :         :           :                
+in_data[37]                  : AB18      : input  : 3.3-V LVTTL       :         : 7         : N              
+out3_data[37]                : AB19      : output : 3.3-V LVTTL       :         : 7         : N              
+VCCIO7                       : AB20      : power  :                   : 3.3V    : 7         :                
+GND                          : AB21      : gnd    :                   :         :           :                
+VCCD_PLL4                    : AB22      : power  :                   : 1.2V    :           :                
+in_channel[74]               : AB23      : input  : 3.3-V LVTTL       :         : 6         : N              
+in_channel[15]               : AB24      : input  : 3.3-V LVTTL       :         : 6         : N              
+out0_data[56]                : AB25      : output : 3.3-V LVTTL       :         : 6         : N              
+out3_data[56]                : AB26      : output : 3.3-V LVTTL       :         : 6         : N              
+GND                          : AB27      : gnd    :                   :         :           :                
+VCCIO6                       : AB28      : power  :                   : 3.3V    : 6         :                
+in_data[19]                  : AB29      : input  : 3.3-V LVTTL       :         : 6         : N              
+in_data[57]                  : AB30      : input  : 3.3-V LVTTL       :         : 6         : N              
+in_channel[7]                : AC1       : input  : 3.3-V LVTTL       :         : 1         : N              
+csr_writedata[12]            : AC2       : input  : 3.3-V LVTTL       :         : 1         : N              
+out1_data[4]                 : AC3       : output : 3.3-V LVTTL       :         : 1         : N              
+out2_data[6]                 : AC4       : output : 3.3-V LVTTL       :         : 1         : N              
+out2_data[4]                 : AC5       : output : 3.3-V LVTTL       :         : 1         : N              
+out1_data[5]                 : AC6       : output : 3.3-V LVTTL       :         : 1         : N              
+out1_data[25]                : AC7       : output : 3.3-V LVTTL       :         : 1         : N              
+GND_PLL1                     : AC8       : gnd    :                   :         :           :                
+VCCA_PLL1                    : AC9       : power  :                   : 1.2V    :           :                
+GNDA_PLL1                    : AC10      : gnd    :                   :         :           :                
+csr_readdata[8]              : AC11      : output : 3.3-V LVTTL       :         : 8         : N              
+csr_address[9]               : AC12      : input  : 3.3-V LVTTL       :         : 8         : N              
+in_channel[4]                : AC13      : input  : 3.3-V LVTTL       :         : 8         : N              
+GND*                         : AC14      :        :                   :         : 8         :                
+GND+                         : AC15      :        :                   :         : 7         :                
+out0_data[1]                 : AC16      : output : 3.3-V LVTTL       :         : 7         : N              
+out2_data[0]                 : AC17      : output : 3.3-V LVTTL       :         : 7         : N              
+out2_data[37]                : AC18      : output : 3.3-V LVTTL       :         : 7         : N              
+out2_empty[0]                : AC19      : output : 3.3-V LVTTL       :         : 7         : N              
+csr_writedata[19]            : AC20      : input  : 3.3-V LVTTL       :         : 7         : N              
+in_channel[109]              : AC21      : input  : 3.3-V LVTTL       :         : 7         : N              
+VCCA_PLL4                    : AC22      : power  :                   : 1.2V    :           :                
+GND*                         : AC23      :        :                   :         : 6         :                
+in_channel[16]               : AC24      : input  : 3.3-V LVTTL       :         : 6         : N              
+csr_writedata[2]             : AC25      : input  : 3.3-V LVTTL       :         : 6         : N              
+GND*                         : AC26      :        :                   :         : 6         :                
+out1_empty[2]                : AC27      : output : 3.3-V LVTTL       :         : 6         : N              
+in_data[61]                  : AC28      : input  : 3.3-V LVTTL       :         : 6         : N              
+out1_data[3]                 : AC29      : output : 3.3-V LVTTL       :         : 6         : N              
+in_data[3]                   : AC30      : input  : 3.3-V LVTTL       :         : 6         : N              
+in_data[6]                   : AD1       : input  : 3.3-V LVTTL       :         : 1         : N              
+out0_data[4]                 : AD2       : output : 3.3-V LVTTL       :         : 1         : N              
+out3_data[4]                 : AD3       : output : 3.3-V LVTTL       :         : 1         : N              
+out0_data[5]                 : AD4       : output : 3.3-V LVTTL       :         : 1         : N              
+out3_data[25]                : AD5       : output : 3.3-V LVTTL       :         : 1         : N              
+out1_data[24]                : AD6       : output : 3.3-V LVTTL       :         : 1         : N              
+out1_data[26]                : AD7       : output : 3.3-V LVTTL       :         : 1         : N              
+in_channel[126]              : AD8       : input  : 3.3-V LVTTL       :         : 8         : N              
+csr_readdata[22]             : AD9       : output : 3.3-V LVTTL       :         : 8         : N              
+in_channel[115]              : AD10      : input  : 3.3-V LVTTL       :         : 8         : N              
+in_channel[93]               : AD11      : input  : 3.3-V LVTTL       :         : 8         : N              
+in_channel[84]               : AD12      : input  : 3.3-V LVTTL       :         : 8         : N              
+in_channel[106]              : AD13      : input  : 3.3-V LVTTL       :         : 8         : N              
+csr_readdata[11]             : AD14      : output : 3.3-V LVTTL       :         : 8         : N              
+GND+                         : AD15      :        :                   :         : 7         :                
+out3_data[2]                 : AD16      : output : 3.3-V LVTTL       :         : 7         : N              
+out2_data[1]                 : AD17      : output : 3.3-V LVTTL       :         : 7         : N              
+out2_data[39]                : AD18      : output : 3.3-V LVTTL       :         : 7         : N              
+out3_data[38]                : AD19      : output : 3.3-V LVTTL       :         : 7         : N              
+csr_writedata[4]             : AD20      : input  : 3.3-V LVTTL       :         : 7         : N              
+csr_address[6]               : AD21      : input  : 3.3-V LVTTL       :         : 7         : N              
+in_channel[119]              : AD22      : input  : 3.3-V LVTTL       :         : 7         : N              
+GNDA_PLL4                    : AD23      : gnd    :                   :         :           :                
+in_channel[117]              : AD24      : input  : 3.3-V LVTTL       :         : 6         : N              
+~LVDS195p/nCEO~              : AD25      : output : 3.3-V LVTTL       :         : 6         : N              
+GND*                         : AD26      :        :                   :         : 6         :                
+in_channel[86]               : AD27      : input  : 3.3-V LVTTL       :         : 6         : N              
+out3_data[62]                : AD28      : output : 3.3-V LVTTL       :         : 6         : N              
+out1_data[56]                : AD29      : output : 3.3-V LVTTL       :         : 6         : N              
+out2_data[62]                : AD30      : output : 3.3-V LVTTL       :         : 6         : N              
+out3_data[5]                 : AE1       : output : 3.3-V LVTTL       :         : 1         : N              
+out2_data[5]                 : AE2       : output : 3.3-V LVTTL       :         : 1         : N              
+out3_data[24]                : AE3       : output : 3.3-V LVTTL       :         : 1         : N              
+out2_data[46]                : AE4       : output : 3.3-V LVTTL       :         : 1         : N              
+VCCIO1                       : AE5       : power  :                   : 3.3V    : 1         :                
+GND                          : AE6       : gnd    :                   :         :           :                
+in_data[25]                  : AE7       : input  : 3.3-V LVTTL       :         : 8         : N              
+out0_data[24]                : AE8       : output : 3.3-V LVTTL       :         : 8         : N              
+GND                          : AE9       : gnd    :                   :         :           :                
+VCCIO8                       : AE10      : power  :                   : 3.3V    : 8         :                
+csr_address[5]               : AE11      : input  : 3.3-V LVTTL       :         : 8         : N              
+GND*                         : AE12      :        :                   :         : 8         :                
+in_channel[82]               : AE13      : input  : 3.3-V LVTTL       :         : 8         : N              
+GND                          : AE14      : gnd    :                   :         :           :                
+in_channel[107]              : AE15      : input  : 3.3-V LVTTL       :         : 8         : N              
+out3_data[1]                 : AE16      : output : 3.3-V LVTTL       :         : 7         : N              
+out1_data[1]                 : AE17      : output : 3.3-V LVTTL       :         : 7         : N              
+GND                          : AE18      : gnd    :                   :         :           :                
+out3_empty[0]                : AE19      : output : 3.3-V LVTTL       :         : 7         : N              
+in_channel[68]               : AE20      : input  : 3.3-V LVTTL       :         : 7         : N              
+VCCIO7                       : AE21      : power  :                   : 3.3V    : 7         :                
+GND                          : AE22      : gnd    :                   :         :           :                
+csr_writedata[27]            : AE23      : input  : 3.3-V LVTTL       :         : 7         : N              
+in_channel[51]               : AE24      : input  : 3.3-V LVTTL       :         : 7         : N              
+GND                          : AE25      : gnd    :                   :         :           :                
+VCCIO6                       : AE26      : power  :                   : 3.3V    : 6         :                
+out3_empty[2]                : AE27      : output : 3.3-V LVTTL       :         : 6         : N              
+in_channel[30]               : AE28      : input  : 3.3-V LVTTL       :         : 6         : N              
+out0_data[62]                : AE29      : output : 3.3-V LVTTL       :         : 6         : N              
+out1_data[62]                : AE30      : output : 3.3-V LVTTL       :         : 6         : N              
+in_channel[18]               : AF1       : input  : 3.3-V LVTTL       :         : 1         : N              
+in_channel[1]                : AF2       : input  : 3.3-V LVTTL       :         : 1         : N              
+out0_data[25]                : AF3       : output : 3.3-V LVTTL       :         : 1         : N              
+out1_data[46]                : AF4       : output : 3.3-V LVTTL       :         : 1         : N              
+GND                          : AF5       : gnd    :                   :         :           :                
+VCCIO8                       : AF6       : power  :                   : 3.3V    : 8         :                
+in_channel[19]               : AF7       : input  : 3.3-V LVTTL       :         : 8         : N              
+GND*                         : AF8       :        :                   :         : 8         :                
+GND*                         : AF9       :        :                   :         : 8         :                
+in_channel[31]               : AF10      : input  : 3.3-V LVTTL       :         : 8         : N              
+reset_reset_n                : AF11      : input  : 3.3-V LVTTL       :         : 8         : N              
+csr_writedata[26]            : AF12      : input  : 3.3-V LVTTL       :         : 8         : N              
+VCCIO8                       : AF13      : power  :                   : 3.3V    : 8         :                
+in_channel[95]               : AF14      : input  : 3.3-V LVTTL       :         : 8         : N              
+in_channel[70]               : AF15      : input  : 3.3-V LVTTL       :         : 8         : N              
+out1_data[2]                 : AF16      : output : 3.3-V LVTTL       :         : 7         : N              
+in_data[18]                  : AF17      : input  : 3.3-V LVTTL       :         : 7         : N              
+out1_empty[0]                : AF18      : output : 3.3-V LVTTL       :         : 7         : N              
+VCCIO7                       : AF19      : power  :                   : 3.3V    : 7         :                
+out0_empty[0]                : AF20      : output : 3.3-V LVTTL       :         : 7         : N              
+in_channel[88]               : AF21      : input  : 3.3-V LVTTL       :         : 7         : N              
+csr_readdata[31]             : AF22      : output : 3.3-V LVTTL       :         : 7         : N              
+csr_writedata[23]            : AF23      : input  : 3.3-V LVTTL       :         : 7         : N              
+in_channel[34]               : AF24      : input  : 3.3-V LVTTL       :         : 7         : N              
+VCCIO7                       : AF25      : power  :                   : 3.3V    : 7         :                
+GND                          : AF26      : gnd    :                   :         :           :                
+csr_writedata[1]             : AF27      : input  : 3.3-V LVTTL       :         : 6         : N              
+GND*                         : AF28      :        :                   :         : 6         :                
+out0_empty[2]                : AF29      : output : 3.3-V LVTTL       :         : 6         : N              
+out2_data[61]                : AF30      : output : 3.3-V LVTTL       :         : 6         : N              
+VCCIO1                       : AG1       : power  :                   : 3.3V    : 1         :                
+csr_readdata[28]             : AG2       : output : 3.3-V LVTTL       :         : 1         : N              
+out0_data[26]                : AG3       : output : 3.3-V LVTTL       :         : 1         : N              
+in_data[24]                  : AG4       : input  : 3.3-V LVTTL       :         : 8         : N              
+in_data[26]                  : AG5       : input  : 3.3-V LVTTL       :         : 8         : N              
+csr_readdata[27]             : AG6       : output : 3.3-V LVTTL       :         : 8         : N              
+in_channel[125]              : AG7       : input  : 3.3-V LVTTL       :         : 8         : N              
+in_channel[113]              : AG8       : input  : 3.3-V LVTTL       :         : 8         : N              
+csr_writedata[6]             : AG9       : input  : 3.3-V LVTTL       :         : 8         : N              
+in_channel[12]               : AG10      : input  : 3.3-V LVTTL       :         : 8         : N              
+GND                          : AG11      : gnd    :                   :         :           :                
+in_channel[10]               : AG12      : input  : 3.3-V LVTTL       :         : 8         : N              
+csr_readdata[21]             : AG13      : output : 3.3-V LVTTL       :         : 8         : N              
+in_channel[99]               : AG14      : input  : 3.3-V LVTTL       :         : 8         : N              
+GND+                         : AG15      :        :                   :         : 8         :                
+out0_data[0]                 : AG16      : output : 3.3-V LVTTL       :         : 7         : N              
+out1_data[18]                : AG17      : output : 3.3-V LVTTL       :         : 7         : N              
+out2_data[38]                : AG18      : output : 3.3-V LVTTL       :         : 7         : N              
+out0_data[37]                : AG19      : output : 3.3-V LVTTL       :         : 7         : N              
+out1_data[37]                : AG20      : output : 3.3-V LVTTL       :         : 7         : N              
+GND                          : AG21      : gnd    :                   :         :           :                
+csr_readdata[1]              : AG22      : output : 3.3-V LVTTL       :         : 7         : N              
+in_channel[11]               : AG23      : input  : 3.3-V LVTTL       :         : 7         : N              
+in_channel[24]               : AG24      : input  : 3.3-V LVTTL       :         : 7         : N              
+in_channel[63]               : AG25      : input  : 3.3-V LVTTL       :         : 7         : N              
+csr_writedata[10]            : AG26      : input  : 3.3-V LVTTL       :         : 7         : N              
+GND*                         : AG27      :        :                   :         : 7         :                
+GND*                         : AG28      :        :                   :         : 6         :                
+in_channel[79]               : AG29      : input  : 3.3-V LVTTL       :         : 6         : N              
+VCCIO6                       : AG30      : power  :                   : 3.3V    : 6         :                
+csr_readdata[24]             : AH1       : output : 3.3-V LVTTL       :         : 1         : N              
+out2_data[25]                : AH2       : output : 3.3-V LVTTL       :         : 1         : N              
+out3_data[26]                : AH3       : output : 3.3-V LVTTL       :         : 8         : N              
+in_channel[33]               : AH4       : input  : 3.3-V LVTTL       :         : 8         : N              
+in_channel[66]               : AH5       : input  : 3.3-V LVTTL       :         : 8         : N              
+GND                          : AH6       : gnd    :                   :         :           :                
+in_channel[81]               : AH7       : input  : 3.3-V LVTTL       :         : 8         : N              
+VCCIO8                       : AH8       : power  :                   : 3.3V    : 8         :                
+csr_readdata[15]             : AH9       : output : 3.3-V LVTTL       :         : 8         : N              
+csr_readdata[14]             : AH10      : output : 3.3-V LVTTL       :         : 8         : N              
+VCCIO8                       : AH11      : power  :                   : 3.3V    : 8         :                
+in_channel[45]               : AH12      : input  : 3.3-V LVTTL       :         : 8         : N              
+csr_readdata[18]             : AH13      : output : 3.3-V LVTTL       :         : 8         : N              
+GND+                         : AH14      :        :                   :         : 8         :                
+in_channel[28]               : AH15      : input  : 3.3-V LVTTL       :         : 8         : N              
+out1_data[0]                 : AH16      : output : 3.3-V LVTTL       :         : 7         : N              
+out0_data[2]                 : AH17      : output : 3.3-V LVTTL       :         : 7         : N              
+out2_data[2]                 : AH18      : output : 3.3-V LVTTL       :         : 7         : N              
+GND*                         : AH19      :        :                   :         : 7         :                
+out3_data[39]                : AH20      : output : 3.3-V LVTTL       :         : 7         : N              
+VCCIO7                       : AH21      : power  :                   : 3.3V    : 7         :                
+in_channel[44]               : AH22      : input  : 3.3-V LVTTL       :         : 7         : N              
+VCCIO7                       : AH23      : power  :                   : 3.3V    : 7         :                
+in_channel[43]               : AH24      : input  : 3.3-V LVTTL       :         : 7         : N              
+GND                          : AH25      : gnd    :                   :         :           :                
+in_channel[25]               : AH26      : input  : 3.3-V LVTTL       :         : 7         : N              
+in_channel[72]               : AH27      : input  : 3.3-V LVTTL       :         : 7         : N              
+in_channel[89]               : AH28      : input  : 3.3-V LVTTL       :         : 6         : N              
+in_channel[58]               : AH29      : input  : 3.3-V LVTTL       :         : 6         : N              
+GND*                         : AH30      :        :                   :         : 6         :                
+GND                          : AJ1       : gnd    :                   :         :           :                
+in_data[46]                  : AJ2       : input  : 3.3-V LVTTL       :         : 8         : N              
+in_channel[55]               : AJ3       : input  : 3.3-V LVTTL       :         : 8         : N              
+in_channel[49]               : AJ4       : input  : 3.3-V LVTTL       :         : 8         : N              
+csr_readdata[19]             : AJ5       : output : 3.3-V LVTTL       :         : 8         : N              
+in_channel[98]               : AJ6       : input  : 3.3-V LVTTL       :         : 8         : N              
+csr_readdata[16]             : AJ7       : output : 3.3-V LVTTL       :         : 8         : N              
+GND*                         : AJ8       :        :                   :         : 8         :                
+in_channel[71]               : AJ9       : input  : 3.3-V LVTTL       :         : 8         : N              
+in_channel[41]               : AJ10      : input  : 3.3-V LVTTL       :         : 8         : N              
+csr_readdata[26]             : AJ11      : output : 3.3-V LVTTL       :         : 8         : N              
+GND*                         : AJ12      :        :                   :         : 8         :                
+GND*                         : AJ13      :        :                   :         : 8         :                
+out2_data[18]                : AJ14      : output : 3.3-V LVTTL       :         : 8         : N              
+in_channel[69]               : AJ15      : input  : 3.3-V LVTTL       :         : 8         : N              
+out3_data[18]                : AJ16      : output : 3.3-V LVTTL       :         : 7         : N              
+in_data[2]                   : AJ17      : input  : 3.3-V LVTTL       :         : 7         : N              
+out0_data[18]                : AJ18      : output : 3.3-V LVTTL       :         : 7         : N              
+in_data[1]                   : AJ19      : input  : 3.3-V LVTTL       :         : 7         : N              
+in_channel[67]               : AJ20      : input  : 3.3-V LVTTL       :         : 7         : N              
+out0_data[38]                : AJ21      : output : 3.3-V LVTTL       :         : 7         : N              
+out1_data[39]                : AJ22      : output : 3.3-V LVTTL       :         : 7         : N              
+in_data[39]                  : AJ23      : input  : 3.3-V LVTTL       :         : 7         : N              
+csr_readdata[25]             : AJ24      : output : 3.3-V LVTTL       :         : 7         : N              
+in_channel[23]               : AJ25      : input  : 3.3-V LVTTL       :         : 7         : N              
+GND*                         : AJ26      :        :                   :         : 7         :                
+csr_readdata[23]             : AJ27      : output : 3.3-V LVTTL       :         : 7         : N              
+in_channel[62]               : AJ28      : input  : 3.3-V LVTTL       :         : 7         : N              
+csr_address[10]              : AJ29      : input  : 3.3-V LVTTL       :         : 6         : N              
+GND                          : AJ30      : gnd    :                   :         :           :                
+GND                          : AK2       : gnd    :                   :         :           :                
+csr_address[12]              : AK3       : input  : 3.3-V LVTTL       :         : 8         : N              
+VCCIO8                       : AK4       : power  :                   : 3.3V    : 8         :                
+in_channel[36]               : AK5       : input  : 3.3-V LVTTL       :         : 8         : N              
+csr_writedata[9]             : AK6       : input  : 3.3-V LVTTL       :         : 8         : N              
+csr_writedata[29]            : AK7       : input  : 3.3-V LVTTL       :         : 8         : N              
+csr_readdata[6]              : AK8       : output : 3.3-V LVTTL       :         : 8         : N              
+in_channel[35]               : AK9       : input  : 3.3-V LVTTL       :         : 8         : N              
+in_channel[17]               : AK10      : input  : 3.3-V LVTTL       :         : 8         : N              
+csr_address[7]               : AK11      : input  : 3.3-V LVTTL       :         : 8         : N              
+GND*                         : AK12      :        :                   :         : 8         :                
+GND                          : AK13      : gnd    :                   :         :           :                
+csr_writedata[11]            : AK14      : input  : 3.3-V LVTTL       :         : 8         : N              
+VCCIO8                       : AK15      : power  :                   : 3.3V    : 8         :                
+VCCIO7                       : AK16      : power  :                   : 3.3V    : 7         :                
+in_data[0]                   : AK17      : input  : 3.3-V LVTTL       :         : 7         : N              
+GND                          : AK18      : gnd    :                   :         :           :                
+out3_data[0]                 : AK19      : output : 3.3-V LVTTL       :         : 7         : N              
+csr_writedata[0]             : AK20      : input  : 3.3-V LVTTL       :         : 7         : N              
+in_empty[0]                  : AK21      : input  : 3.3-V LVTTL       :         : 7         : N              
+out1_data[38]                : AK22      : output : 3.3-V LVTTL       :         : 7         : N              
+out0_data[39]                : AK23      : output : 3.3-V LVTTL       :         : 7         : N              
+in_data[38]                  : AK24      : input  : 3.3-V LVTTL       :         : 7         : N              
+in_channel[87]               : AK25      : input  : 3.3-V LVTTL       :         : 7         : N              
+in_channel[0]                : AK26      : input  : 3.3-V LVTTL       :         : 7         : N              
+VCCIO7                       : AK27      : power  :                   : 3.3V    : 7         :                
+in_channel[118]              : AK28      : input  : 3.3-V LVTTL       :         : 7         : N              
+GND                          : AK29      : gnd    :                   :         :           :                
+GND                          : B1        : gnd    :                   :         :           :                
+out0_data[14]                : B2        : output : 3.3-V LVTTL       :         : 2         : N              
+in_channel[97]               : B3        : input  : 3.3-V LVTTL       :         : 3         : N              
+in_channel[104]              : B4        : input  : 3.3-V LVTTL       :         : 3         : N              
+out2_data[41]                : B5        : output : 3.3-V LVTTL       :         : 3         : N              
+out1_data[40]                : B6        : output : 3.3-V LVTTL       :         : 3         : N              
+out0_data[40]                : B7        : output : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : B8        :        :                   :         : 3         :                
+in_channel[78]               : B9        : input  : 3.3-V LVTTL       :         : 3         : N              
+csr_writedata[21]            : B10       : input  : 3.3-V LVTTL       :         : 3         : N              
+in_channel[47]               : B11       : input  : 3.3-V LVTTL       :         : 3         : N              
+in_channel[39]               : B12       : input  : 3.3-V LVTTL       :         : 3         : N              
+csr_writedata[24]            : B13       : input  : 3.3-V LVTTL       :         : 3         : N              
+out0_data[31]                : B14       : output : 3.3-V LVTTL       :         : 3         : N              
+out3_data[13]                : B15       : output : 3.3-V LVTTL       :         : 3         : N              
+out0_data[13]                : B16       : output : 3.3-V LVTTL       :         : 4         : N              
+in_data[12]                  : B17       : input  : 3.3-V LVTTL       :         : 4         : N              
+out3_data[11]                : B18       : output : 3.3-V LVTTL       :         : 4         : N              
+out1_data[11]                : B19       : output : 3.3-V LVTTL       :         : 4         : N              
+csr_writedata[28]            : B20       : input  : 3.3-V LVTTL       :         : 4         : N              
+csr_address[8]               : B21       : input  : 3.3-V LVTTL       :         : 4         : N              
+out1_data[47]                : B22       : output : 3.3-V LVTTL       :         : 4         : N              
+out2_data[32]                : B23       : output : 3.3-V LVTTL       :         : 4         : N              
+out2_data[29]                : B24       : output : 3.3-V LVTTL       :         : 4         : N              
+csr_writedata[18]            : B25       : input  : 3.3-V LVTTL       :         : 4         : N              
+csr_writedata[25]            : B26       : input  : 3.3-V LVTTL       :         : 4         : N              
+csr_readdata[3]              : B27       : output : 3.3-V LVTTL       :         : 4         : N              
+in_channel[9]                : B28       : input  : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : B29       :        :                   :         : 4         :                
+GND                          : B30       : gnd    :                   :         :           :                
+in_channel[120]              : C1        : input  : 3.3-V LVTTL       :         : 2         : N              
+csr_readdata[9]              : C2        : output : 3.3-V LVTTL       :         : 2         : N              
+out1_data[17]                : C3        : output : 3.3-V LVTTL       :         : 2         : N              
+out2_data[20]                : C4        : output : 3.3-V LVTTL       :         : 3         : N              
+csr_writedata[7]             : C5        : input  : 3.3-V LVTTL       :         : 3         : N              
+GND                          : C6        : gnd    :                   :         :           :                
+out3_data[41]                : C7        : output : 3.3-V LVTTL       :         : 3         : N              
+VCCIO3                       : C8        : power  :                   : 3.3V    : 3         :                
+in_channel[73]               : C9        : input  : 3.3-V LVTTL       :         : 3         : N              
+csr_writedata[31]            : C10       : input  : 3.3-V LVTTL       :         : 3         : N              
+VCCIO3                       : C11       : power  :                   : 3.3V    : 3         :                
+in_channel[32]               : C12       : input  : 3.3-V LVTTL       :         : 3         : N              
+csr_write                    : C13       : input  : 3.3-V LVTTL       :         : 3         : N              
+in_channel[59]               : C14       : input  : 3.3-V LVTTL       :         : 3         : N              
+out3_data[31]                : C15       : output : 3.3-V LVTTL       :         : 3         : N              
+out3_data[12]                : C16       : output : 3.3-V LVTTL       :         : 4         : N              
+out1_data[12]                : C17       : output : 3.3-V LVTTL       :         : 4         : N              
+out2_data[13]                : C18       : output : 3.3-V LVTTL       :         : 4         : N              
+in_channel[60]               : C19       : input  : 3.3-V LVTTL       :         : 4         : N              
+VCCIO4                       : C20       : power  :                   : 3.3V    : 4         :                
+out0_data[29]                : C21       : output : 3.3-V LVTTL       :         : 4         : N              
+in_data[47]                  : C22       : input  : 3.3-V LVTTL       :         : 4         : N              
+VCCIO4                       : C23       : power  :                   : 3.3V    : 4         :                
+out1_data[30]                : C24       : output : 3.3-V LVTTL       :         : 4         : N              
+GND                          : C25       : gnd    :                   :         :           :                
+csr_readdata[10]             : C26       : output : 3.3-V LVTTL       :         : 4         : N              
+in_channel[20]               : C27       : input  : 3.3-V LVTTL       :         : 4         : N              
+out3_data[51]                : C28       : output : 3.3-V LVTTL       :         : 4         : N              
+out1_data[33]                : C29       : output : 3.3-V LVTTL       :         : 5         : N              
+out3_data[45]                : C30       : output : 3.3-V LVTTL       :         : 5         : N              
+VCCIO2                       : D1        : power  :                   : 3.3V    : 2         :                
+GND*                         : D2        :        :                   :         : 2         :                
+in_channel[56]               : D3        : input  : 3.3-V LVTTL       :         : 2         : N              
+out1_data[16]                : D4        : output : 3.3-V LVTTL       :         : 3         : N              
+out1_data[63]                : D5        : output : 3.3-V LVTTL       :         : 3         : N              
+out3_data[40]                : D6        : output : 3.3-V LVTTL       :         : 3         : N              
+out3_data[20]                : D7        : output : 3.3-V LVTTL       :         : 3         : N              
+in_data[59]                  : D8        : input  : 3.3-V LVTTL       :         : 3         : N              
+in_channel[80]               : D9        : input  : 3.3-V LVTTL       :         : 3         : N              
+in_channel[6]                : D10       : input  : 3.3-V LVTTL       :         : 3         : N              
+GND                          : D11       : gnd    :                   :         :           :                
+in_channel[108]              : D12       : input  : 3.3-V LVTTL       :         : 3         : N              
+csr_address[14]              : D13       : input  : 3.3-V LVTTL       :         : 3         : N              
+csr_readdata[30]             : D14       : output : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : D15       :        :                   :         : 3         :                
+GND+                         : D16       :        :                   :         : 4         :                
+out1_data[31]                : D17       : output : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : D18       :        :                   :         : 4         :                
+in_channel[50]               : D19       : input  : 3.3-V LVTTL       :         : 4         : N              
+GND                          : D20       : gnd    :                   :         :           :                
+out0_data[47]                : D21       : output : 3.3-V LVTTL       :         : 4         : N              
+out3_data[32]                : D22       : output : 3.3-V LVTTL       :         : 4         : N              
+in_data[30]                  : D23       : input  : 3.3-V LVTTL       :         : 4         : N              
+out0_data[30]                : D24       : output : 3.3-V LVTTL       :         : 4         : N              
+in_data[29]                  : D25       : input  : 3.3-V LVTTL       :         : 4         : N              
+out0_data[52]                : D26       : output : 3.3-V LVTTL       :         : 4         : N              
+in_channel[53]               : D27       : input  : 3.3-V LVTTL       :         : 4         : N              
+in_data[33]                  : D28       : input  : 3.3-V LVTTL       :         : 5         : N              
+out0_data[21]                : D29       : output : 3.3-V LVTTL       :         : 5         : N              
+VCCIO5                       : D30       : power  :                   : 3.3V    : 5         :                
+out0_valid                   : E1        : output : 3.3-V LVTTL       :         : 2         : N              
+in_endofpacket               : E2        : input  : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : E3        :        :                   :         : 2         :                
+out2_data[16]                : E4        : output : 3.3-V LVTTL       :         : 2         : N              
+GND                          : E5        : gnd    :                   :         :           :                
+VCCIO3                       : E6        : power  :                   : 3.3V    : 3         :                
+out3_data[16]                : E7        : output : 3.3-V LVTTL       :         : 3         : N              
+in_data[63]                  : E8        : input  : 3.3-V LVTTL       :         : 3         : N              
+out0_data[41]                : E9        : output : 3.3-V LVTTL       :         : 3         : N              
+out1_data[41]                : E10       : output : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : E11       :        :                   :         : 3         :                
+csr_writedata[8]             : E12       : input  : 3.3-V LVTTL       :         : 3         : N              
+in_channel[116]              : E13       : input  : 3.3-V LVTTL       :         : 3         : N              
+csr_read                     : E14       : input  : 3.3-V LVTTL       :         : 3         : N              
+out2_data[12]                : E15       : output : 3.3-V LVTTL       :         : 3         : N              
+GND+                         : E16       :        :                   :         : 4         :                
+out2_data[31]                : E17       : output : 3.3-V LVTTL       :         : 4         : N              
+VCCIO4                       : E18       : power  :                   : 3.3V    : 4         :                
+in_channel[5]                : E19       : input  : 3.3-V LVTTL       :         : 4         : N              
+csr_readdata[2]              : E20       : output : 3.3-V LVTTL       :         : 4         : N              
+out1_data[29]                : E21       : output : 3.3-V LVTTL       :         : 4         : N              
+csr_address[11]              : E22       : input  : 3.3-V LVTTL       :         : 4         : N              
+csr_writedata[5]             : E23       : input  : 3.3-V LVTTL       :         : 4         : N              
+out2_data[51]                : E24       : output : 3.3-V LVTTL       :         : 4         : N              
+VCCIO4                       : E25       : power  :                   : 3.3V    : 4         :                
+GND                          : E26       : gnd    :                   :         :           :                
+out2_data[52]                : E27       : output : 3.3-V LVTTL       :         : 5         : N              
+out3_data[21]                : E28       : output : 3.3-V LVTTL       :         : 5         : N              
+in_data[21]                  : E29       : input  : 3.3-V LVTTL       :         : 5         : N              
+out3_data[22]                : E30       : output : 3.3-V LVTTL       :         : 5         : N              
+out3_valid                   : F1        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : F2        :        :                   :         : 2         :                
+out3_data[17]                : F3        : output : 3.3-V LVTTL       :         : 2         : N              
+out2_data[17]                : F4        : output : 3.3-V LVTTL       :         : 2         : N              
+VCCIO2                       : F5        : power  :                   : 3.3V    : 2         :                
+GND                          : F6        : gnd    :                   :         :           :                
+out0_data[63]                : F7        : output : 3.3-V LVTTL       :         : 3         : N              
+out1_data[14]                : F8        : output : 3.3-V LVTTL       :         : 3         : N              
+GND                          : F9        : gnd    :                   :         :           :                
+VCCIO3                       : F10       : power  :                   : 3.3V    : 3         :                
+in_data[20]                  : F11       : input  : 3.3-V LVTTL       :         : 3         : N              
+csr_readdata[17]             : F12       : output : 3.3-V LVTTL       :         : 3         : N              
+csr_readdata[12]             : F13       : output : 3.3-V LVTTL       :         : 3         : N              
+GND                          : F14       : gnd    :                   :         :           :                
+VCCIO3                       : F15       : power  :                   : 3.3V    : 3         :                
+out2_data[11]                : F16       : output : 3.3-V LVTTL       :         : 4         : N              
+GND                          : F17       : gnd    :                   :         :           :                
+in_channel[111]              : F18       : input  : 3.3-V LVTTL       :         : 4         : N              
+csr_clk_clk                  : F19       : input  : 3.3-V LVTTL       :         : 4         : N              
+csr_address[3]               : F20       : input  : 3.3-V LVTTL       :         : 4         : N              
+VCCIO4                       : F21       : power  :                   : 3.3V    : 4         :                
+GND                          : F22       : gnd    :                   :         :           :                
+out2_data[60]                : F23       : output : 3.3-V LVTTL       :         : 4         : N              
+out1_data[20]                : F24       : output : 3.3-V LVTTL       :         : 4         : N              
+GND                          : F25       : gnd    :                   :         :           :                
+VCCIO5                       : F26       : power  :                   : 3.3V    : 5         :                
+in_data[45]                  : F27       : input  : 3.3-V LVTTL       :         : 5         : N              
+in_data[60]                  : F28       : input  : 3.3-V LVTTL       :         : 5         : N              
+out0_data[45]                : F29       : output : 3.3-V LVTTL       :         : 5         : N              
+out2_data[22]                : F30       : output : 3.3-V LVTTL       :         : 5         : N              
+in_channel[21]               : G1        : input  : 3.3-V LVTTL       :         : 2         : N              
+csr_readdata[20]             : G2        : output : 3.3-V LVTTL       :         : 2         : N              
+in_data[16]                  : G3        : input  : 3.3-V LVTTL       :         : 2         : N              
+out0_data[17]                : G4        : output : 3.3-V LVTTL       :         : 2         : N              
+out3_data[63]                : G5        : output : 3.3-V LVTTL       :         : 2         : N              
+out2_data[14]                : G6        : output : 3.3-V LVTTL       :         : 2         : N              
+~ASDO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : G7        : input  : 3.3-V LVTTL       :         : 2         : N              
+GNDA_PLL3                    : G8        : gnd    :                   :         :           :                
+csr_writedata[15]            : G9        : input  : 3.3-V LVTTL       :         : 3         : N              
+out3_data[59]                : G10       : output : 3.3-V LVTTL       :         : 3         : N              
+out0_data[59]                : G11       : output : 3.3-V LVTTL       :         : 3         : N              
+in_channel[105]              : G12       : input  : 3.3-V LVTTL       :         : 3         : N              
+in_channel[42]               : G13       : input  : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : G14       :        :                   :         : 3         :                
+csr_address[0]               : G15       : input  : 3.3-V LVTTL       :         : 3         : N              
+out1_data[13]                : G16       : output : 3.3-V LVTTL       :         : 4         : N              
+in_data[11]                  : G17       : input  : 3.3-V LVTTL       :         : 4         : N              
+in_channel[46]               : G18       : input  : 3.3-V LVTTL       :         : 4         : N              
+out3_data[29]                : G19       : output : 3.3-V LVTTL       :         : 4         : N              
+out3_data[30]                : G20       : output : 3.3-V LVTTL       :         : 4         : N              
+in_channel[96]               : G21       : input  : 3.3-V LVTTL       :         : 4         : N              
+out0_data[51]                : G22       : output : 3.3-V LVTTL       :         : 4         : N              
+GNDA_PLL2                    : G23       : gnd    :                   :         :           :                
+out1_data[52]                : G24       : output : 3.3-V LVTTL       :         : 5         : N              
+out3_data[60]                : G25       : output : 3.3-V LVTTL       :         : 5         : N              
+in_data[52]                  : G26       : input  : 3.3-V LVTTL       :         : 5         : N              
+out1_data[45]                : G27       : output : 3.3-V LVTTL       :         : 5         : N              
+out2_data[21]                : G28       : output : 3.3-V LVTTL       :         : 5         : N              
+out1_data[22]                : G29       : output : 3.3-V LVTTL       :         : 5         : N              
+out1_data[21]                : G30       : output : 3.3-V LVTTL       :         : 5         : N              
+in_channel[127]              : H1        : input  : 3.3-V LVTTL       :         : 2         : N              
+in_data[8]                   : H2        : input  : 3.3-V LVTTL       :         : 2         : N              
+out2_data[42]                : H3        : output : 3.3-V LVTTL       :         : 2         : N              
+in_startofpacket             : H4        : input  : 3.3-V LVTTL       :         : 2         : N              
+out0_data[16]                : H5        : output : 3.3-V LVTTL       :         : 2         : N              
+out3_data[14]                : H6        : output : 3.3-V LVTTL       :         : 2         : N              
+out2_data[63]                : H7        : output : 3.3-V LVTTL       :         : 2         : N              
+in_data[14]                  : H8        : input  : 3.3-V LVTTL       :         : 2         : N              
+VCCA_PLL3                    : H9        : power  :                   : 1.2V    :           :                
+out0_data[20]                : H10       : output : 3.3-V LVTTL       :         : 3         : N              
+csr_writedata[22]            : H11       : input  : 3.3-V LVTTL       :         : 3         : N              
+csr_readdata[5]              : H12       : output : 3.3-V LVTTL       :         : 3         : N              
+in_channel[83]               : H13       : input  : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : H14       :        :                   :         : 3         :                
+csr_address[1]               : H15       : input  : 3.3-V LVTTL       :         : 3         : N              
+out0_data[11]                : H16       : output : 3.3-V LVTTL       :         : 4         : N              
+in_data[13]                  : H17       : input  : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : H18       :        :                   :         : 4         :                
+out2_data[30]                : H19       : output : 3.3-V LVTTL       :         : 4         : N              
+out0_data[32]                : H20       : output : 3.3-V LVTTL       :         : 4         : N              
+in_channel[85]               : H21       : input  : 3.3-V LVTTL       :         : 4         : N              
+VCCA_PLL2                    : H22       : power  :                   : 1.2V    :           :                
+out3_data[52]                : H23       : output : 3.3-V LVTTL       :         : 5         : N              
+in_data[51]                  : H24       : input  : 3.3-V LVTTL       :         : 5         : N              
+out1_data[60]                : H25       : output : 3.3-V LVTTL       :         : 5         : N              
+out0_data[22]                : H26       : output : 3.3-V LVTTL       :         : 5         : N              
+out0_data[33]                : H27       : output : 3.3-V LVTTL       :         : 5         : N              
+out3_data[33]                : H28       : output : 3.3-V LVTTL       :         : 5         : N              
+in_channel[112]              : H29       : input  : 3.3-V LVTTL       :         : 5         : N              
+csr_writedata[30]            : H30       : input  : 3.3-V LVTTL       :         : 5         : N              
+out1_data[10]                : J1        : output : 3.3-V LVTTL       :         : 2         : N              
+out2_data[15]                : J2        : output : 3.3-V LVTTL       :         : 2         : N              
+VCCIO2                       : J3        : power  :                   : 3.3V    : 2         :                
+GND                          : J4        : gnd    :                   :         :           :                
+out1_startofpacket           : J5        : output : 3.3-V LVTTL       :         : 2         : N              
+out2_startofpacket           : J6        : output : 3.3-V LVTTL       :         : 2         : N              
+out3_endofpacket             : J7        : output : 3.3-V LVTTL       :         : 2         : N              
+GND_PLL3                     : J8        : gnd    :                   :         :           :                
+VCCD_PLL3                    : J9        : power  :                   : 1.2V    :           :                
+GND                          : J10       : gnd    :                   :         :           :                
+VCCIO3                       : J11       : power  :                   : 3.3V    : 3         :                
+in_channel[91]               : J12       : input  : 3.3-V LVTTL       :         : 3         : N              
+csr_address[13]              : J13       : input  : 3.3-V LVTTL       :         : 3         : N              
+GND                          : J14       : gnd    :                   :         :           :                
+VCCIO3                       : J15       : power  :                   : 3.3V    : 3         :                
+VCCIO4                       : J16       : power  :                   : 3.3V    : 4         :                
+GND                          : J17       : gnd    :                   :         :           :                
+csr_address[2]               : J18       : input  : 3.3-V LVTTL       :         : 4         : N              
+out2_data[47]                : J19       : output : 3.3-V LVTTL       :         : 4         : N              
+VCCIO4                       : J20       : power  :                   : 3.3V    : 4         :                
+GND                          : J21       : gnd    :                   :         :           :                
+VCCD_PLL2                    : J22       : power  :                   : 1.2V    :           :                
+VCCIO5                       : J23       : power  :                   : 3.3V    : 5         :                
+out1_data[51]                : J24       : output : 3.3-V LVTTL       :         : 5         : N              
+out0_data[60]                : J25       : output : 3.3-V LVTTL       :         : 5         : N              
+out2_data[45]                : J26       : output : 3.3-V LVTTL       :         : 5         : N              
+GND                          : J27       : gnd    :                   :         :           :                
+VCCIO5                       : J28       : power  :                   : 3.3V    : 5         :                
+in_data[48]                  : J29       : input  : 3.3-V LVTTL       :         : 5         : N              
+out0_data[34]                : J30       : output : 3.3-V LVTTL       :         : 5         : N              
+out1_data[9]                 : K1        : output : 3.3-V LVTTL       :         : 2         : N              
+out3_data[10]                : K2        : output : 3.3-V LVTTL       :         : 2         : N              
+out1_data[8]                 : K3        : output : 3.3-V LVTTL       :         : 2         : N              
+out2_data[8]                 : K4        : output : 3.3-V LVTTL       :         : 2         : N              
+out1_valid                   : K5        : output : 3.3-V LVTTL       :         : 2         : N              
+out0_startofpacket           : K6        : output : 3.3-V LVTTL       :         : 2         : N              
+out1_endofpacket             : K7        : output : 3.3-V LVTTL       :         : 2         : N              
+out0_endofpacket             : K8        : output : 3.3-V LVTTL       :         : 2         : N              
+~nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : K9        : input  : 3.3-V LVTTL       :         : 2         : N              
+GND_PLL3                     : K10       : gnd    :                   :         :           :                
+GND                          : K11       : gnd    :                   :         :           :                
+GND                          : K12       : gnd    :                   :         :           :                
+VCCINT                       : K13       : power  :                   : 1.2V    :           :                
+VCCINT                       : K14       : power  :                   : 1.2V    :           :                
+GND                          : K15       : gnd    :                   :         :           :                
+GND                          : K16       : gnd    :                   :         :           :                
+VCCINT                       : K17       : power  :                   : 1.2V    :           :                
+VCCINT                       : K18       : power  :                   : 1.2V    :           :                
+GND                          : K19       : gnd    :                   :         :           :                
+GND                          : K20       : gnd    :                   :         :           :                
+GND_PLL2                     : K21       : gnd    :                   :         :           :                
+GND_PLL2                     : K22       : gnd    :                   :         :           :                
+in_channel[103]              : K23       : input  : 3.3-V LVTTL       :         : 5         : N              
+in_data[22]                  : K24       : input  : 3.3-V LVTTL       :         : 5         : N              
+out2_data[33]                : K25       : output : 3.3-V LVTTL       :         : 5         : N              
+out2_data[34]                : K26       : output : 3.3-V LVTTL       :         : 5         : N              
+out3_data[48]                : K27       : output : 3.3-V LVTTL       :         : 5         : N              
+out1_data[35]                : K28       : output : 3.3-V LVTTL       :         : 5         : N              
+out0_data[36]                : K29       : output : 3.3-V LVTTL       :         : 5         : N              
+out0_data[35]                : K30       : output : 3.3-V LVTTL       :         : 5         : N              
+out2_data[9]                 : L1        : output : 3.3-V LVTTL       :         : 2         : N              
+out1_data[15]                : L2        : output : 3.3-V LVTTL       :         : 2         : N              
+out3_data[15]                : L3        : output : 3.3-V LVTTL       :         : 2         : N              
+out0_data[9]                 : L4        : output : 3.3-V LVTTL       :         : 2         : N              
+out3_startofpacket           : L5        : output : 3.3-V LVTTL       :         : 2         : N              
+out1_data[42]                : L6        : output : 3.3-V LVTTL       :         : 2         : N              
+in_data[42]                  : L7        : input  : 3.3-V LVTTL       :         : 2         : N              
+in_valid                     : L8        : input  : 3.3-V LVTTL       :         : 2         : N              
+out2_endofpacket             : L9        : output : 3.3-V LVTTL       :         : 2         : N              
+out0_data[42]                : L10       : output : 3.3-V LVTTL       :         : 2         : N              
+VCCIO2                       : L11       : power  :                   : 3.3V    : 2         :                
+GND                          : L12       : gnd    :                   :         :           :                
+VCCINT                       : L13       : power  :                   : 1.2V    :           :                
+VCCINT                       : L14       : power  :                   : 1.2V    :           :                
+VCCINT                       : L15       : power  :                   : 1.2V    :           :                
+VCCINT                       : L16       : power  :                   : 1.2V    :           :                
+VCCINT                       : L17       : power  :                   : 1.2V    :           :                
+VCCINT                       : L18       : power  :                   : 1.2V    :           :                
+VCCINT                       : L19       : power  :                   : 1.2V    :           :                
+VCCIO5                       : L20       : power  :                   : 3.3V    : 5         :                
+out0_data[48]                : L21       : output : 3.3-V LVTTL       :         : 5         : N              
+out3_data[36]                : L22       : output : 3.3-V LVTTL       :         : 5         : N              
+GND                          : L23       : gnd    :                   :         :           :                
+GND*                         : L24       :        :                   :         : 5         :                
+GND*                         : L25       :        :                   :         : 5         :                
+out2_data[48]                : L26       : output : 3.3-V LVTTL       :         : 5         : N              
+in_data[34]                  : L27       : input  : 3.3-V LVTTL       :         : 5         : N              
+out2_data[35]                : L28       : output : 3.3-V LVTTL       :         : 5         : N              
+out3_data[44]                : L29       : output : 3.3-V LVTTL       :         : 5         : N              
+out2_data[44]                : L30       : output : 3.3-V LVTTL       :         : 5         : N              
+in_channel[38]               : M1        : input  : 3.3-V LVTTL       :         : 2         : N              
+in_channel[54]               : M2        : input  : 3.3-V LVTTL       :         : 2         : N              
+csr_address[15]              : M3        : input  : 3.3-V LVTTL       :         : 2         : N              
+in_channel[8]                : M4        : input  : 3.3-V LVTTL       :         : 2         : N              
+out3_data[8]                 : M5        : output : 3.3-V LVTTL       :         : 2         : N              
+in_data[9]                   : M6        : input  : 3.3-V LVTTL       :         : 2         : N              
+in_data[15]                  : M7        : input  : 3.3-V LVTTL       :         : 2         : N              
+out2_valid                   : M8        : output : 3.3-V LVTTL       :         : 2         : N              
+out3_data[42]                : M9        : output : 3.3-V LVTTL       :         : 2         : N              
+out0_data[8]                 : M10       : output : 3.3-V LVTTL       :         : 2         : N              
+GND                          : M11       : gnd    :                   :         :           :                
+VCCINT                       : M12       : power  :                   : 1.2V    :           :                
+VCCINT                       : M13       : power  :                   : 1.2V    :           :                
+VCCINT                       : M14       : power  :                   : 1.2V    :           :                
+VCCINT                       : M15       : power  :                   : 1.2V    :           :                
+GND                          : M16       : gnd    :                   :         :           :                
+VCCINT                       : M17       : power  :                   : 1.2V    :           :                
+VCCINT                       : M18       : power  :                   : 1.2V    :           :                
+VCCINT                       : M19       : power  :                   : 1.2V    :           :                
+GND                          : M20       : gnd    :                   :         :           :                
+out3_data[35]                : M21       : output : 3.3-V LVTTL       :         : 5         : N              
+in_data[36]                  : M22       : input  : 3.3-V LVTTL       :         : 5         : N              
+out1_data[34]                : M23       : output : 3.3-V LVTTL       :         : 5         : N              
+out1_data[48]                : M24       : output : 3.3-V LVTTL       :         : 5         : N              
+out1_data[36]                : M25       : output : 3.3-V LVTTL       :         : 5         : N              
+in_data[35]                  : M26       : input  : 3.3-V LVTTL       :         : 5         : N              
+out3_data[34]                : M27       : output : 3.3-V LVTTL       :         : 5         : N              
+in_channel[52]               : M28       : input  : 3.3-V LVTTL       :         : 5         : N              
+in_data[50]                  : M29       : input  : 3.3-V LVTTL       :         : 5         : N              
+out1_data[44]                : M30       : output : 3.3-V LVTTL       :         : 5         : N              
+GND                          : N1        : gnd    :                   :         :           :                
+in_channel[61]               : N2        : input  : 3.3-V LVTTL       :         : 2         : N              
+csr_address[4]               : N3        : input  : 3.3-V LVTTL       :         : 2         : N              
+in_channel[37]               : N4        : input  : 3.3-V LVTTL       :         : 2         : N              
+VCCIO2                       : N5        : power  :                   : 3.3V    : 2         :                
+GND                          : N6        : gnd    :                   :         :           :                
+out3_data[9]                 : N7        : output : 3.3-V LVTTL       :         : 2         : N              
+out2_data[10]                : N8        : output : 3.3-V LVTTL       :         : 2         : N              
+out0_data[10]                : N9        : output : 3.3-V LVTTL       :         : 2         : N              
+in_data[10]                  : N10       : input  : 3.3-V LVTTL       :         : 2         : N              
+VCCINT                       : N11       : power  :                   : 1.2V    :           :                
+VCCINT                       : N12       : power  :                   : 1.2V    :           :                
+GND                          : N13       : gnd    :                   :         :           :                
+GND                          : N14       : gnd    :                   :         :           :                
+GND                          : N15       : gnd    :                   :         :           :                
+GND                          : N16       : gnd    :                   :         :           :                
+GND                          : N17       : gnd    :                   :         :           :                
+GND                          : N18       : gnd    :                   :         :           :                
+VCCINT                       : N19       : power  :                   : 1.2V    :           :                
+VCCINT                       : N20       : power  :                   : 1.2V    :           :                
+in_data[43]                  : N21       : input  : 3.3-V LVTTL       :         : 5         : N              
+out1_data[50]                : N22       : output : 3.3-V LVTTL       :         : 5         : N              
+out2_data[36]                : N23       : output : 3.3-V LVTTL       :         : 5         : N              
+out3_data[49]                : N24       : output : 3.3-V LVTTL       :         : 5         : N              
+out3_data[50]                : N25       : output : 3.3-V LVTTL       :         : 5         : N              
+GND                          : N26       : gnd    :                   :         :           :                
+VCCIO5                       : N27       : power  :                   : 3.3V    : 5         :                
+out2_data[50]                : N28       : output : 3.3-V LVTTL       :         : 5         : N              
+out1_data[49]                : N29       : output : 3.3-V LVTTL       :         : 5         : N              
+GND                          : N30       : gnd    :                   :         :           :                
+in_channel[27]               : P1        : input  : 3.3-V LVTTL       :         : 2         : N              
+in_channel[124]              : P2        : input  : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : P3        :        :                   :         : 2         :                
+csr_waitrequest              : P4        : output : 3.3-V LVTTL       :         : 2         : N              
+TCK                          : P5        : input  :                   :         : 2         :                
+csr_readdata[13]             : P6        : output : 3.3-V LVTTL       :         : 2         : N              
+csr_readdata[0]              : P7        : output : 3.3-V LVTTL       :         : 2         : N              
+TDI                          : P8        : input  :                   :         : 2         :                
+out0_data[15]                : P9        : output : 3.3-V LVTTL       :         : 2         : N              
+GND                          : P10       : gnd    :                   :         :           :                
+VCCINT                       : P11       : power  :                   : 1.2V    :           :                
+VCCINT                       : P12       : power  :                   : 1.2V    :           :                
+GND                          : P13       : gnd    :                   :         :           :                
+GND                          : P14       : gnd    :                   :         :           :                
+GND                          : P15       : gnd    :                   :         :           :                
+GND                          : P16       : gnd    :                   :         :           :                
+GND                          : P17       : gnd    :                   :         :           :                
+GND                          : P18       : gnd    :                   :         :           :                
+VCCINT                       : P19       : power  :                   : 1.2V    :           :                
+VCCINT                       : P20       : power  :                   : 1.2V    :           :                
+GND                          : P21       : gnd    :                   :         :           :                
+in_data[49]                  : P22       : input  : 3.3-V LVTTL       :         : 5         : N              
+out0_data[49]                : P23       : output : 3.3-V LVTTL       :         : 5         : N              
+in_data[44]                  : P24       : input  : 3.3-V LVTTL       :         : 5         : N              
+out0_data[50]                : P25       : output : 3.3-V LVTTL       :         : 5         : N              
+out2_data[43]                : P26       : output : 3.3-V LVTTL       :         : 5         : N              
+out1_data[43]                : P27       : output : 3.3-V LVTTL       :         : 5         : N              
+out0_data[44]                : P28       : output : 3.3-V LVTTL       :         : 5         : N              
+out2_data[49]                : P29       : output : 3.3-V LVTTL       :         : 5         : N              
+out0_data[43]                : P30       : output : 3.3-V LVTTL       :         : 5         : N              
+VCCIO2                       : R1        : power  :                   : 3.3V    : 2         :                
+in_data[40]                  : R2        : input  : 3.3-V LVTTL       :         : 2         : N              
+in_data[41]                  : R3        : input  : 3.3-V LVTTL       :         : 2         : N              
+TDO                          : R4        : output :                   :         : 2         :                
+nCONFIG                      : R5        :        :                   :         : 2         :                
+nCE                          : R6        :        :                   :         : 2         :                
+TMS                          : R7        : input  :                   :         : 2         :                
+DATA0                        : R8        : input  :                   :         : 2         :                
+DCLK                         : R9        :        :                   :         : 2         :                
+VCCIO2                       : R10       : power  :                   : 3.3V    : 2         :                
+GND                          : R11       : gnd    :                   :         :           :                
+VCCINT                       : R12       : power  :                   : 1.2V    :           :                
+GND                          : R13       : gnd    :                   :         :           :                
+GND                          : R14       : gnd    :                   :         :           :                
+GND                          : R15       : gnd    :                   :         :           :                
+GND                          : R16       : gnd    :                   :         :           :                
+GND                          : R17       : gnd    :                   :         :           :                
+GND                          : R18       : gnd    :                   :         :           :                
+VCCINT                       : R19       : power  :                   : 1.2V    :           :                
+GND                          : R20       : gnd    :                   :         :           :                
+VCCIO5                       : R21       : power  :                   : 3.3V    : 5         :                
+csr_writedata[16]            : R22       : input  : 3.3-V LVTTL       :         : 5         : N              
+in_channel[90]               : R23       : input  : 3.3-V LVTTL       :         : 5         : N              
+out0_data[53]                : R24       : output : 3.3-V LVTTL       :         : 5         : N              
+out3_data[43]                : R25       : output : 3.3-V LVTTL       :         : 5         : N              
+csr_writedata[17]            : R26       : input  : 3.3-V LVTTL       :         : 5         : N              
+GND*                         : R27       :        :                   :         : 5         :                
+GND+                         : R28       :        :                   :         : 5         :                
+GND+                         : R29       :        :                   :         : 5         :                
+VCCIO5                       : R30       : power  :                   : 3.3V    : 5         :                
+VCCIO1                       : T1        : power  :                   : 3.3V    : 1         :                
+in_channel[13]               : T2        : input  : 3.3-V LVTTL       :         : 1         : N              
+in_channel[14]               : T3        : input  : 3.3-V LVTTL       :         : 1         : N              
+in_channel[22]               : T4        : input  : 3.3-V LVTTL       :         : 1         : N              
+in_channel[77]               : T5        : input  : 3.3-V LVTTL       :         : 1         : N              
+in_channel[48]               : T6        : input  : 3.3-V LVTTL       :         : 1         : N              
+csr_reset_reset_n            : T7        : input  : 3.3-V LVTTL       :         : 1         : N              
+out0_data[28]                : T8        : output : 3.3-V LVTTL       :         : 1         : N              
+out0_data[58]                : T9        : output : 3.3-V LVTTL       :         : 1         : N              
+VCCIO1                       : T10       : power  :                   : 3.3V    : 1         :                
+GND                          : T11       : gnd    :                   :         :           :                
+VCCINT                       : T12       : power  :                   : 1.2V    :           :                
+GND                          : T13       : gnd    :                   :         :           :                
+GND                          : T14       : gnd    :                   :         :           :                
+GND                          : T15       : gnd    :                   :         :           :                
+GND                          : T16       : gnd    :                   :         :           :                
+GND                          : T17       : gnd    :                   :         :           :                
+GND                          : T18       : gnd    :                   :         :           :                
+VCCINT                       : T19       : power  :                   : 1.2V    :           :                
+GND                          : T20       : gnd    :                   :         :           :                
+VCCIO6                       : T21       : power  :                   : 3.3V    : 6         :                
+in_channel[123]              : T22       : input  : 3.3-V LVTTL       :         : 5         : N              
+out0_empty[1]                : T23       : output : 3.3-V LVTTL       :         : 5         : N              
+GND+                         : T24       :        :                   :         : 6         :                
+GND+                         : T25       :        :                   :         : 6         :                
+in_data[55]                  : T26       : input  : 3.3-V LVTTL       :         : 6         : N              
+out2_data[55]                : T27       : output : 3.3-V LVTTL       :         : 6         : N              
+out3_empty[1]                : T28       : output : 3.3-V LVTTL       :         : 6         : N              
+out2_data[54]                : T29       : output : 3.3-V LVTTL       :         : 6         : N              
+VCCIO6                       : T30       : power  :                   : 3.3V    : 6         :                
+in_data[27]                  : U1        : input  : 3.3-V LVTTL       :         : 1         : N              
+out2_data[23]                : U2        : output : 3.3-V LVTTL       :         : 1         : N              
+out3_data[58]                : U3        : output : 3.3-V LVTTL       :         : 1         : N              
+out1_data[27]                : U4        : output : 3.3-V LVTTL       :         : 1         : N              
+out1_data[23]                : U5        : output : 3.3-V LVTTL       :         : 1         : N              
+out1_data[58]                : U6        : output : 3.3-V LVTTL       :         : 1         : N              
+out2_data[28]                : U7        : output : 3.3-V LVTTL       :         : 1         : N              
+out0_data[23]                : U8        : output : 3.3-V LVTTL       :         : 1         : N              
+out3_data[23]                : U9        : output : 3.3-V LVTTL       :         : 1         : N              
+GND                          : U10       : gnd    :                   :         :           :                
+VCCINT                       : U11       : power  :                   : 1.2V    :           :                
+VCCINT                       : U12       : power  :                   : 1.2V    :           :                
+GND                          : U13       : gnd    :                   :         :           :                
+GND                          : U14       : gnd    :                   :         :           :                
+GND                          : U15       : gnd    :                   :         :           :                
+GND                          : U16       : gnd    :                   :         :           :                
+GND                          : U17       : gnd    :                   :         :           :                
+GND                          : U18       : gnd    :                   :         :           :                
+VCCINT                       : U19       : power  :                   : 1.2V    :           :                
+VCCINT                       : U20       : power  :                   : 1.2V    :           :                
+GND                          : U21       : gnd    :                   :         :           :                
+MSEL0                        : U22       :        :                   :         : 6         :                
+out0_data[55]                : U23       : output : 3.3-V LVTTL       :         : 6         : N              
+out3_data[54]                : U24       : output : 3.3-V LVTTL       :         : 6         : N              
+in_data[54]                  : U25       : input  : 3.3-V LVTTL       :         : 6         : N              
+nSTATUS                      : U26       :        :                   :         : 6         :                
+CONF_DONE                    : U27       :        :                   :         : 6         :                
+MSEL1                        : U28       :        :                   :         : 6         :                
+out1_data[55]                : U29       : output : 3.3-V LVTTL       :         : 6         : N              
+out1_empty[1]                : U30       : output : 3.3-V LVTTL       :         : 6         : N              
+GND                          : V1        : gnd    :                   :         :           :                
+out0_data[27]                : V2        : output : 3.3-V LVTTL       :         : 1         : N              
+in_data[58]                  : V3        : input  : 3.3-V LVTTL       :         : 1         : N              
+out2_data[27]                : V4        : output : 3.3-V LVTTL       :         : 1         : N              
+VCCIO1                       : V5        : power  :                   : 3.3V    : 1         :                
+GND                          : V6        : gnd    :                   :         :           :                
+in_channel[110]              : V7        : input  : 3.3-V LVTTL       :         : 1         : N              
+in_channel[26]               : V8        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : V9        :        :                   :         : 1         :                
+in_channel[2]                : V10       : input  : 3.3-V LVTTL       :         : 1         : N              
+VCCINT                       : V11       : power  :                   : 1.2V    :           :                
+VCCINT                       : V12       : power  :                   : 1.2V    :           :                
+GND                          : V13       : gnd    :                   :         :           :                
+GND                          : V14       : gnd    :                   :         :           :                
+GND                          : V15       : gnd    :                   :         :           :                
+GND                          : V16       : gnd    :                   :         :           :                
+GND                          : V17       : gnd    :                   :         :           :                
+GND                          : V18       : gnd    :                   :         :           :                
+VCCINT                       : V19       : power  :                   : 1.2V    :           :                
+VCCINT                       : V20       : power  :                   : 1.2V    :           :                
+out2_data[3]                 : V21       : output : 3.3-V LVTTL       :         : 6         : N              
+out0_data[3]                 : V22       : output : 3.3-V LVTTL       :         : 6         : N              
+out1_data[53]                : V23       : output : 3.3-V LVTTL       :         : 6         : N              
+out0_ready                   : V24       : input  : 3.3-V LVTTL       :         : 6         : N              
+GND                          : V25       : gnd    :                   :         :           :                
+VCCIO6                       : V26       : power  :                   : 3.3V    : 6         :                
+out2_data[53]                : V27       : output : 3.3-V LVTTL       :         : 6         : N              
+out2_empty[1]                : V28       : output : 3.3-V LVTTL       :         : 6         : N              
+out1_data[54]                : V29       : output : 3.3-V LVTTL       :         : 6         : N              
+GND                          : V30       : gnd    :                   :         :           :                
+out1_data[28]                : W1        : output : 3.3-V LVTTL       :         : 1         : N              
+in_data[28]                  : W2        : input  : 3.3-V LVTTL       :         : 1         : N              
+out3_data[27]                : W3        : output : 3.3-V LVTTL       :         : 1         : N              
+in_data[23]                  : W4        : input  : 3.3-V LVTTL       :         : 1         : N              
+in_channel[3]                : W5        : input  : 3.3-V LVTTL       :         : 1         : N              
+csr_writedata[3]             : W6        : input  : 3.3-V LVTTL       :         : 1         : N              
+in_channel[57]               : W7        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : W8        :        :                   :         : 1         :                
+csr_writedata[14]            : W9        : input  : 3.3-V LVTTL       :         : 1         : N              
+in_channel[94]               : W10       : input  : 3.3-V LVTTL       :         : 1         : N              
+GND                          : W11       : gnd    :                   :         :           :                
+VCCINT                       : W12       : power  :                   : 1.2V    :           :                
+VCCINT                       : W13       : power  :                   : 1.2V    :           :                
+VCCINT                       : W14       : power  :                   : 1.2V    :           :                
+GND                          : W15       : gnd    :                   :         :           :                
+VCCINT                       : W16       : power  :                   : 1.2V    :           :                
+VCCINT                       : W17       : power  :                   : 1.2V    :           :                
+VCCINT                       : W18       : power  :                   : 1.2V    :           :                
+VCCINT                       : W19       : power  :                   : 1.2V    :           :                
+GND                          : W20       : gnd    :                   :         :           :                
+out2_data[19]                : W21       : output : 3.3-V LVTTL       :         : 6         : N              
+out1_data[57]                : W22       : output : 3.3-V LVTTL       :         : 6         : N              
+out3_data[19]                : W23       : output : 3.3-V LVTTL       :         : 6         : N              
+in_data[62]                  : W24       : input  : 3.3-V LVTTL       :         : 6         : N              
+out0_data[19]                : W25       : output : 3.3-V LVTTL       :         : 6         : N              
+out2_ready                   : W26       : input  : 3.3-V LVTTL       :         : 6         : N              
+out3_data[53]                : W27       : output : 3.3-V LVTTL       :         : 6         : N              
+out0_data[54]                : W28       : output : 3.3-V LVTTL       :         : 6         : N              
+in_data[53]                  : W29       : input  : 3.3-V LVTTL       :         : 6         : N              
+in_empty[1]                  : W30       : input  : 3.3-V LVTTL       :         : 6         : N              
+out2_data[58]                : Y1        : output : 3.3-V LVTTL       :         : 1         : N              
+in_channel[122]              : Y2        : input  : 3.3-V LVTTL       :         : 1         : N              
+in_channel[64]               : Y3        : input  : 3.3-V LVTTL       :         : 1         : N              
+out3_data[28]                : Y4        : output : 3.3-V LVTTL       :         : 1         : N              
+csr_readdata[7]              : Y5        : output : 3.3-V LVTTL       :         : 1         : N              
+in_data[7]                   : Y6        : input  : 3.3-V LVTTL       :         : 1         : N              
+out3_data[6]                 : Y7        : output : 3.3-V LVTTL       :         : 1         : N              
+out0_data[6]                 : Y8        : output : 3.3-V LVTTL       :         : 1         : N              
+out3_data[7]                 : Y9        : output : 3.3-V LVTTL       :         : 1         : N              
+in_data[5]                   : Y10       : input  : 3.3-V LVTTL       :         : 1         : N              
+VCCIO1                       : Y11       : power  :                   : 3.3V    : 1         :                
+VCCINT                       : Y12       : power  :                   : 1.2V    :           :                
+VCCINT                       : Y13       : power  :                   : 1.2V    :           :                
+VCCINT                       : Y14       : power  :                   : 1.2V    :           :                
+VCCINT                       : Y15       : power  :                   : 1.2V    :           :                
+VCCINT                       : Y16       : power  :                   : 1.2V    :           :                
+VCCINT                       : Y17       : power  :                   : 1.2V    :           :                
+VCCINT                       : Y18       : power  :                   : 1.2V    :           :                
+GND                          : Y19       : gnd    :                   :         :           :                
+VCCIO6                       : Y20       : power  :                   : 3.3V    : 6         :                
+in_empty[2]                  : Y21       : input  : 3.3-V LVTTL       :         : 6         : N              
+out3_data[61]                : Y22       : output : 3.3-V LVTTL       :         : 6         : N              
+out2_data[56]                : Y23       : output : 3.3-V LVTTL       :         : 6         : N              
+out2_empty[2]                : Y24       : output : 3.3-V LVTTL       :         : 6         : N              
+out2_data[57]                : Y25       : output : 3.3-V LVTTL       :         : 6         : N              
+out1_data[19]                : Y26       : output : 3.3-V LVTTL       :         : 6         : N              
+out3_data[3]                 : Y27       : output : 3.3-V LVTTL       :         : 6         : N              
+out3_ready                   : Y28       : input  : 3.3-V LVTTL       :         : 6         : N              
+out3_data[55]                : Y29       : output : 3.3-V LVTTL       :         : 6         : N              
+GND*                         : Y30       :        :                   :         : 6         :                
